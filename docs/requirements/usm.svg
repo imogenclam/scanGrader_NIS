@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1650" height="572" viewBox="0 0 1650 572" role="img" aria-labelledby="title description">
+<title id="title">Карта пользовательских историй Scan Grader</title>
+<desc id="description">Карта показывает, как преподаватель создаёт предмет и публикует задание. Студент вступает по коду, сдаёт PDF и получает оценку после утверждения.</desc>
+<style>
+text{font-family:'Segoe UI',Arial,sans-serif;font-size:16px;fill:#1e3040}
+.title{font-size:31px;font-weight:700}
+.subtitle{font-size:15px;fill:#486275}
+.step{font-size:17px;font-weight:700}
+.actor{font-size:14px;fill:#486275}
+.row{font-size:16px;font-weight:700}
+.id{font-size:15px;font-weight:700;fill:#086052}
+.small{font-size:14px;fill:#3a5364}
+</style>
+<rect x="0" y="0" width="1650" height="572" rx="0" fill="#f6f8fa" stroke="none"/>
+<text x="26" y="45" class="title"><tspan x="26" dy="0">Scan Grader. Карта пользовательских историй</tspan></text>
+<text x="27" y="71" class="subtitle"><tspan x="27" dy="0">Шаги идут слева направо</tspan></text>
+<rect x="18" y="190" width="1614" height="112" rx="8" fill="#e6f5f0" stroke="#8ec7b7"/>
+<text x="29" y="218" class="row"><tspan x="29" dy="0">Срез MVP</tspan></text>
+<text x="29" y="331" class="row"><tspan x="29" dy="0">Следующий</tspan><tspan x="29" dy="21">релиз</tspan></text>
+<text x="29" y="414" class="row"><tspan x="29" dy="0">Вне объёма</tspan></text>
+<rect x="163" y="98" width="198" height="78" rx="8" fill="#e7eef4" stroke="none"/>
+<text x="175" y="121" class="step"><tspan x="175" dy="0">1. Создать предмет</tspan></text>
+<text x="175" y="163" class="actor"><tspan x="175" dy="0">Преподаватель</tspan></text>
+<rect x="163" y="199" width="198" height="94" rx="8" fill="#fff" stroke="#afdbcf"/>
+<text x="175" y="223" class="id"><tspan x="175" dy="0">US-007</tspan></text>
+<text x="175" y="248" class=""><tspan x="175" dy="0">Создать предмет</tspan><tspan x="175" dy="21">и получить код</tspan></text>
+<rect x="163" y="309" width="198" height="72" rx="8" fill="#fff" stroke="#d9e2e9"/>
+<text x="175" y="333" class=""><tspan x="175" dy="0">Сопреподаватели</tspan></text>
+<rect x="163" y="392" width="198" height="72" rx="8" fill="#f0f3f6" stroke="#d9e2e9"/>
+<text x="175" y="416" class=""><tspan x="175" dy="0">Управление</tspan><tspan x="175" dy="21">учебными группами</tspan></text>
+<rect x="373" y="98" width="198" height="78" rx="8" fill="#e7eef4" stroke="none"/>
+<text x="385" y="121" class="step"><tspan x="385" dy="0">2. Опубликовать</tspan><tspan x="385" dy="19">задание</tspan></text>
+<text x="385" y="163" class="actor"><tspan x="385" dy="0">Преподаватель</tspan></text>
+<rect x="373" y="199" width="198" height="94" rx="8" fill="#fff" stroke="#afdbcf"/>
+<text x="385" y="223" class="id"><tspan x="385" dy="0">US-001</tspan></text>
+<text x="385" y="248" class=""><tspan x="385" dy="0">Опубликовать задание</tspan><tspan x="385" dy="21">в предмете</tspan></text>
+<rect x="373" y="309" width="198" height="72" rx="8" fill="#fff" stroke="#d9e2e9"/>
+<text x="385" y="333" class=""><tspan x="385" dy="0">Черновик эталона</tspan><tspan x="385" dy="21">от ИИ</tspan></text>
+<rect x="373" y="392" width="198" height="72" rx="8" fill="#f0f3f6" stroke="#d9e2e9"/>
+<text x="385" y="416" class=""><tspan x="385" dy="0">Задания по другим</tspan><tspan x="385" dy="21">дисциплинам</tspan></text>
+<rect x="583" y="98" width="198" height="78" rx="8" fill="#e7eef4" stroke="none"/>
+<text x="595" y="121" class="step"><tspan x="595" dy="0">3. Вступить</tspan><tspan x="595" dy="19">в предмет</tspan></text>
+<text x="595" y="163" class="actor"><tspan x="595" dy="0">Студент</tspan></text>
+<rect x="583" y="199" width="198" height="94" rx="8" fill="#fff" stroke="#afdbcf"/>
+<text x="595" y="223" class="id"><tspan x="595" dy="0">US-002</tspan></text>
+<text x="595" y="248" class=""><tspan x="595" dy="0">Вступить по коду</tspan></text>
+<rect x="583" y="309" width="198" height="72" rx="8" fill="#fff" stroke="#d9e2e9"/>
+<text x="595" y="333" class=""><tspan x="595" dy="0">Обновление кода</tspan></text>
+<rect x="583" y="392" width="198" height="72" rx="8" fill="#f0f3f6" stroke="#d9e2e9"/>
+<text x="595" y="416" class=""><tspan x="595" dy="0">Массовый импорт</tspan><tspan x="595" dy="21">участников</tspan></text>
+<rect x="793" y="98" width="198" height="78" rx="8" fill="#e7eef4" stroke="none"/>
+<text x="805" y="121" class="step"><tspan x="805" dy="0">4. Сдать работу</tspan></text>
+<text x="805" y="163" class="actor"><tspan x="805" dy="0">Студент</tspan></text>
+<rect x="793" y="199" width="198" height="94" rx="8" fill="#fff" stroke="#afdbcf"/>
+<text x="805" y="223" class="id"><tspan x="805" dy="0">US-003</tspan></text>
+<text x="805" y="248" class=""><tspan x="805" dy="0">Загрузить PDF</tspan><tspan x="805" dy="21">и увидеть статус</tspan></text>
+<rect x="793" y="309" width="198" height="72" rx="8" fill="#fff" stroke="#d9e2e9"/>
+<text x="805" y="333" class=""><tspan x="805" dy="0">Повторная сдача</tspan></text>
+<rect x="793" y="392" width="198" height="72" rx="8" fill="#f0f3f6" stroke="#d9e2e9"/>
+<text x="805" y="416" class=""><tspan x="805" dy="0">Сканирование</tspan><tspan x="805" dy="21">в браузере</tspan></text>
+<rect x="1003" y="98" width="198" height="78" rx="8" fill="#e7eef4" stroke="none"/>
+<text x="1015" y="121" class="step"><tspan x="1015" dy="0">5. Получить</tspan><tspan x="1015" dy="19">черновик</tspan></text>
+<text x="1015" y="163" class="actor"><tspan x="1015" dy="0">Преподаватель</tspan></text>
+<rect x="1003" y="199" width="198" height="94" rx="8" fill="#fff" stroke="#afdbcf"/>
+<text x="1015" y="223" class="id"><tspan x="1015" dy="0">US-004</tspan></text>
+<text x="1015" y="248" class=""><tspan x="1015" dy="0">Получить баллы</tspan><tspan x="1015" dy="21">с комментариями</tspan></text>
+<rect x="1003" y="309" width="198" height="72" rx="8" fill="#fff" stroke="#d9e2e9"/>
+<text x="1015" y="333" class=""><tspan x="1015" dy="0">Другие форматы</tspan><tspan x="1015" dy="21">эталона</tspan></text>
+<rect x="1003" y="392" width="198" height="72" rx="8" fill="#f0f3f6" stroke="#d9e2e9"/>
+<rect x="1213" y="98" width="198" height="78" rx="8" fill="#e7eef4" stroke="none"/>
+<text x="1225" y="121" class="step"><tspan x="1225" dy="0">6. Утвердить</tspan><tspan x="1225" dy="19">оценку</tspan></text>
+<text x="1225" y="163" class="actor"><tspan x="1225" dy="0">Преподаватель</tspan></text>
+<rect x="1213" y="199" width="198" height="94" rx="8" fill="#fff" stroke="#afdbcf"/>
+<text x="1225" y="223" class="id"><tspan x="1225" dy="0">US-005</tspan></text>
+<text x="1225" y="248" class=""><tspan x="1225" dy="0">Сверить оценку</tspan><tspan x="1225" dy="21">перед утверждением</tspan></text>
+<rect x="1213" y="309" width="198" height="72" rx="8" fill="#fff" stroke="#d9e2e9"/>
+<text x="1225" y="333" class=""><tspan x="1225" dy="0">Экспорт оценок</tspan></text>
+<rect x="1213" y="392" width="198" height="72" rx="8" fill="#f0f3f6" stroke="#d9e2e9"/>
+<text x="1225" y="416" class=""><tspan x="1225" dy="0">Аннотирование PDF</tspan></text>
+<rect x="1423" y="98" width="198" height="78" rx="8" fill="#e7eef4" stroke="none"/>
+<text x="1435" y="121" class="step"><tspan x="1435" dy="0">7. Увидеть</tspan><tspan x="1435" dy="19">результат</tspan></text>
+<text x="1435" y="163" class="actor"><tspan x="1435" dy="0">Студент</tspan></text>
+<rect x="1423" y="199" width="198" height="94" rx="8" fill="#fff" stroke="#afdbcf"/>
+<text x="1435" y="223" class="id"><tspan x="1435" dy="0">US-006</tspan></text>
+<text x="1435" y="248" class=""><tspan x="1435" dy="0">Открыть итог</tspan><tspan x="1435" dy="21">по своей работе</tspan></text>
+<rect x="1423" y="309" width="198" height="72" rx="8" fill="#fff" stroke="#d9e2e9"/>
+<text x="1435" y="333" class=""><tspan x="1435" dy="0">Уведомление</tspan></text>
+<rect x="1423" y="392" width="198" height="72" rx="8" fill="#f0f3f6" stroke="#d9e2e9"/>
+<text x="1435" y="416" class=""><tspan x="1435" dy="0">Публикация оценки</tspan><tspan x="1435" dy="21">без преподавателя</tspan></text>
+<text x="27" y="498" class="small"><tspan x="27" dy="0">Сценарий 1. От создания предмета до черновика оценки (US-007 → US-001 → US-002 → US-003 → US-004)</tspan></text>
+<text x="27" y="521" class="small"><tspan x="27" dy="0">Сценарий 2. Преподаватель утверждает оценку, после чего студент видит итог (US-005 → US-006)</tspan></text>
+<text x="27" y="545" class="small"><tspan x="27" dy="0">Код открывает доступ к предмету. Студент находит задания в Classroom.</tspan></text>
+</svg>
