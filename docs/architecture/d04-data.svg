@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1440" height="932" viewBox="0 0 1440 932" role="img" aria-labelledby="title description" data-page="D-04">
+  <title id="title">D-04. Модель данных SQLite</title>
+  <desc id="description">Миграция 001_init.sql создаёт четыре таблицы. Черновики хранятся в submission_tasks, итоги в final_grades. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
+  <defs>
+    <marker id="arrow-regular" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#496778" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-plan" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#886420" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-exp" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#725789" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-error" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#994441" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1440" height="932" fill="white" />
+  <text x="40" y="34.844" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-1">SCAN GRADER    /    КТ-2    /    АРХИТЕКТУРА</text>
+  <text x="1400" y="35.19" fill="#4C6471" text-anchor="end" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-2">Локальная версия 1   ·   24.11.2026</text>
+  <rect x="40" y="56" width="88" height="41" rx="4" fill="#17675F" stroke="#17675F" stroke-width="1.5" data-cell="d04-id" />
+  <text x="84" y="84.112" fill="#FFFFFF" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-4">D-04</text>
+  <text x="150" y="89.302" fill="#19313D" text-anchor="start" font-size="37" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-5">Модель данных SQLite</text>
+  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-6">Миграция 001_init.sql создаёт четыре таблицы. Черновики хранятся в submission_tasks, итоги в final_grades.</text>
+  <polyline points="40,151 1400,151" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d04-item-7" />
+  <rect x="40" y="175" width="1360" height="638" rx="10" fill="#FDFDFE" stroke="#ADB3C5" stroke-width="1.5" data-cell="d04-schema" />
+  <text x="57" y="200.344" fill="#4C6471" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-9">SQLITE  /  PRAGMA USER_VERSION = 1  /  FOREIGN_KEYS = ON</text>
+  <rect x="60" y="241" width="315" height="166" rx="7" fill="#FFFFFF" stroke="#7C83A1" stroke-width="1.5" data-cell="d04-actors" />
+  <text x="75" y="266.825" fill="#4C6471" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-11">ТАБЛИЦА</text>
+  <text x="75" y="298.304" fill="#19313D" text-anchor="start" font-size="24" font-family="Consolas, monospace" font-weight="700" data-cell="d04-item-12">demo_actors</text>
+  <polyline points="61,313 374,313" stroke="#7C83A1" fill="none" stroke-width="1.3" stroke-linejoin="round" data-cell="d04-item-13" />
+  <text x="75" y="334.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-14">id</text>
+  <text x="360" y="334.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-15">TEXT · PK</text>
+  <text x="75" y="364.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-16">role</text>
+  <text x="360" y="364.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-17">TEXT</text>
+  <text x="75" y="394.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-18">token</text>
+  <text x="360" y="394.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-19">TEXT · UQ</text>
+  <rect x="541" y="222" width="345" height="226" rx="7" fill="#FFFFFF" stroke="#7C83A1" stroke-width="1.5" data-cell="d04-submissions" />
+  <text x="556" y="247.825" fill="#4C6471" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-21">ТАБЛИЦА</text>
+  <text x="556" y="279.304" fill="#19313D" text-anchor="start" font-size="24" font-family="Consolas, monospace" font-weight="700" data-cell="d04-item-22">submissions</text>
+  <polyline points="542,294 885,294" stroke="#7C83A1" fill="none" stroke-width="1.3" stroke-linejoin="round" data-cell="d04-item-23" />
+  <text x="556" y="315.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-24">id</text>
+  <text x="871" y="315.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-25">INTEGER · PK</text>
+  <text x="556" y="345.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-26">teacher_id</text>
+  <text x="871" y="345.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-27">TEXT · FK</text>
+  <text x="556" y="375.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-28">student_id</text>
+  <text x="871" y="375.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-29">TEXT · FK</text>
+  <text x="556" y="405.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-30">approved_by</text>
+  <text x="871" y="405.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-31">TEXT · FK · ?</text>
+  <text x="556" y="435.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-32">approved_at</text>
+  <text x="871" y="435.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-33">TEXT · ?</text>
+  <rect x="1031" y="222" width="346" height="226" rx="7" fill="#FFFFFF" stroke="#7C83A1" stroke-width="1.5" data-cell="d04-tasks" />
+  <text x="1046" y="247.825" fill="#4C6471" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-35">ТАБЛИЦА</text>
+  <text x="1046" y="279.304" fill="#19313D" text-anchor="start" font-size="24" font-family="Consolas, monospace" font-weight="700" data-cell="d04-item-36">submission_tasks</text>
+  <polyline points="1032,294 1376,294" stroke="#7C83A1" fill="none" stroke-width="1.3" stroke-linejoin="round" data-cell="d04-item-37" />
+  <text x="1046" y="315.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-38">submission_id</text>
+  <text x="1362" y="315.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-39">INTEGER · PK / FK</text>
+  <text x="1046" y="345.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-40">number</text>
+  <text x="1362" y="345.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-41">INTEGER · PK</text>
+  <text x="1046" y="375.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-42">max_score</text>
+  <text x="1362" y="375.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-43">REAL</text>
+  <text x="1046" y="405.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-44">draft_score</text>
+  <text x="1362" y="405.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-45">REAL</text>
+  <text x="1046" y="435.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-46">draft_comment</text>
+  <text x="1362" y="435.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-47">TEXT</text>
+  <rect x="1031" y="564" width="346" height="196" rx="7" fill="#FFFFFF" stroke="#7C83A1" stroke-width="1.5" data-cell="d04-grades" />
+  <text x="1046" y="589.825" fill="#4C6471" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-49">ТАБЛИЦА</text>
+  <text x="1046" y="621.304" fill="#19313D" text-anchor="start" font-size="24" font-family="Consolas, monospace" font-weight="700" data-cell="d04-item-50">final_grades</text>
+  <polyline points="1032,636 1376,636" stroke="#7C83A1" fill="none" stroke-width="1.3" stroke-linejoin="round" data-cell="d04-item-51" />
+  <text x="1046" y="657.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-52">submission_id</text>
+  <text x="1362" y="657.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-53">INTEGER · PK / FK</text>
+  <text x="1046" y="687.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-54">number</text>
+  <text x="1362" y="687.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-55">INTEGER · PK / FK</text>
+  <text x="1046" y="717.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-56">score</text>
+  <text x="1362" y="717.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-57">REAL</text>
+  <text x="1046" y="747.882" fill="#19313D" text-anchor="start" font-size="17" font-family="Consolas, monospace" font-weight="400" data-cell="d04-item-58">comment</text>
+  <text x="1362" y="747.017" fill="#4C6471" text-anchor="end" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-59">TEXT</text>
+  <polyline points="541,340 396,340 396,329 375,329" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d04-item-60" marker-end="url(#arrow-regular)" />
+  <text x="469" y="331.517" fill="#4C6471" text-anchor="middle" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-61">ведёт · 1</text>
+  <polyline points="541,370 396,370 396,329 375,329" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d04-item-62" marker-end="url(#arrow-regular)" />
+  <text x="469" y="361.517" fill="#4C6471" text-anchor="middle" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-63">сдал · 1</text>
+  <polyline points="541,400 396,400 396,329 375,329" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d04-item-64" marker-end="url(#arrow-regular)" />
+  <text x="469" y="391.517" fill="#4C6471" text-anchor="middle" font-size="14.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-65">утвердил · 0..1</text>
+  <polyline points="1031,310 886,310" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d04-item-66" marker-end="url(#arrow-regular)" />
+  <text x="958.5" y="297.69" fill="#4C6471" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-67">входит в сдачу</text>
+  <text x="958.5" y="333.69" fill="#4C6471" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-68">0..* задач на 1</text>
+  <polyline points="1192,564 1192,448" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d04-item-69" marker-end="url(#arrow-regular)" />
+  <text x="1203" y="489.69" fill="#4C6471" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-70">итог одной задачи</text>
+  <text x="1203" y="515.69" fill="#4C6471" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-71">0..1 на задачу</text>
+  <text x="1203" y="542.69" fill="#4C6471" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-72">составной FK</text>
+  <rect x="60" y="483" width="928" height="299" rx="7" fill="#F3F7F7" stroke="#C9D8D8" stroke-width="1.5" data-cell="d04-constraints" />
+  <text x="78" y="513.92" fill="#19313D" text-anchor="start" font-size="20" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-74">Ограничения и производные поля</text>
+  <text x="78" y="551.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-75">Роли и владелец · NFR-003</text>
+  <text x="78" y="574.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-76">role принимает teacher или student. При заполнении approved_by равен teacher_id.</text>
+  <text x="78" y="609.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-77">Момент публикации</text>
+  <text x="78" y="632.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-78">approved_by и approved_at заполняются вместе. По approved_at код определяет статус.</text>
+  <text x="78" y="667.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-79">Границы балла · NFR-006</text>
+  <text x="78" y="690.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-80">SQL требует 0 ≤ draft_score ≤ max_score и score ≥ 0. Код также проверяет верхнюю границу итога.</text>
+  <text x="78" y="725.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-81">Сохранность результата · NFR-007</text>
+  <text x="78" y="748.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-82">Пара (submission_id, number) уникальна в каждой таблице строк. Сумма получается при чтении.</text>
+  <polyline points="40,834 1400,834" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d04-item-83" />
+  <text x="40" y="863.536" fill="#19313D" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-84">Легенда</text>
+  <polyline points="137,859 168,859" stroke="#496778" fill="none" stroke-width="1.7" stroke-linejoin="round" data-cell="d04-item-85" marker-end="url(#arrow-regular)" />
+  <text x="176" y="863.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-86">FK → родитель</text>
+  <rect x="320.98438" y="852" width="24" height="15" rx="3" fill="#EEF0F8" stroke="#7C83A1" stroke-width="1.5" data-cell="d04-item-87" />
+  <text x="359.98438" y="863.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-88">PK · первичный ключ</text>
+  <rect x="546.98438" y="852" width="24" height="15" rx="3" fill="#EEF0F8" stroke="#7C83A1" stroke-width="1.5" data-cell="d04-item-89" />
+  <text x="585.98438" y="863.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-90">FK · внешний ключ</text>
+  <rect x="756.98438" y="852" width="24" height="15" rx="3" fill="#EEF0F8" stroke="#7C83A1" stroke-width="1.5" data-cell="d04-item-91" />
+  <text x="795.98438" y="863.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-92">UQ · уникальное поле</text>
+  <rect x="988.48438" y="852" width="24" height="15" rx="3" fill="#EEF0F8" stroke="#7C83A1" stroke-width="1.5" data-cell="d04-item-93" />
+  <text x="1027.48438" y="863.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-94">? · допускает NULL</text>
+  <text x="40" y="905.69" fill="#17675F" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-95">Связи</text>
+  <a href="../adr/ADR-002-storage.md" xlink:href="../adr/ADR-002-storage.md">
+    <text x="137" y="905.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-96">ADR-002</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="237.5" y="905.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-97">NFR-003</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="316.25" y="905.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-98">NFR-006</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="395" y="905.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-99">NFR-007</text>
+  </a>
+</svg>

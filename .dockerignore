@@ -1,0 +1,8 @@
+.git
+.env
+data
+scangrader
+scangrader.exe
+**/__pycache__
+test-results
+coverage.out
