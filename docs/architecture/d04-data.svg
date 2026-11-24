@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1440" height="932" viewBox="0 0 1440 932" role="img" aria-labelledby="title description" data-page="D-04">
   <title id="title">D-04. Модель данных SQLite</title>
-  <desc id="description">Миграция 001_init.sql создаёт четыре таблицы. Черновики хранятся в submission_tasks, а итоги записываются в final_grades. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
+  <desc id="description">Миграция 001_init.sql создаёт четыре таблицы. Черновики хранятся в submission_tasks, а итоги записываются в final_grades. Scan Grader. КТ-2. Редакция cp2-r2 от 24.11.2026.</desc>
   <defs>
     <marker id="arrow-regular" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
       <path fill="#496778" d="M0,0 L10,4 L0,8 Z" />
@@ -18,7 +18,7 @@
   </defs>
   <rect x="0" y="0" width="1440" height="932" fill="white" />
   <text x="40" y="34.844" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-1">SCAN GRADER    /    КТ-2    /    АРХИТЕКТУРА</text>
-  <text x="1400" y="35.19" fill="#4C6471" text-anchor="end" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-2">Локальная версия 1   ·   24.11.2026</text>
+  <text x="1400" y="35.19" fill="#4C6471" text-anchor="end" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-2">cp2-r2   ·   24.11.2026</text>
   <rect x="40" y="56" width="88" height="41" rx="4" fill="#17675F" stroke="#17675F" stroke-width="1.5" data-cell="d04-id" />
   <text x="84" y="84.112" fill="#FFFFFF" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-4">D-04</text>
   <text x="150" y="89.302" fill="#19313D" text-anchor="start" font-size="37" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-5">Модель данных SQLite</text>

@@ -4,7 +4,7 @@ info:
   version: 0.2.0
   contact:
     name: Артур Галимов
-  description: 'Локальная спецификация КТ-2 от 24.11.2026. Версию указывает поле info.version, а пути заданы без префикса версии. Каждый ответ содержит заголовок Cache-Control: no-store.'
+  description: 'REST API Scan Grader от 24.11.2026. Пути заданы от корня сервера без префикса версии. Каждый ответ содержит заголовок Cache-Control: no-store.'
 servers:
   - url: /
 security:
