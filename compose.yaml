@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - classroom:/data
+    env_file:
+      - path: .env
+        required: false
+    restart: unless-stopped
+volumes:
+  classroom:

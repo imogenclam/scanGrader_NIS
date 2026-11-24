@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="853" viewBox="0 0 1200 853" role="img" aria-labelledby="title desc">
+  <title id="title">D-05. Сдача работы и утверждение черновика</title>
+  <desc id="desc">Архитектура Scan Grader. ADR-001, ADR-002, ADR-003 · NFR-001, NFR-003, NFR-006, NFR-012. Редакция КТ-2 от 22 ноября 2026 года.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 8" markerWidth="8" markerHeight="7" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#4A6276" />
+    </marker>
+  </defs>
+  <rect width="1200" height="853" fill="white" />
+  <text x="36" y="41.1" fill="#187579" font-family="Arial, sans-serif" font-size="15" text-anchor="start" font-weight="700">SCAN GRADER  /  АРХИТЕКТУРА  /  D-05</text>
+  <text x="36" y="88.56" fill="#1D3349" font-family="Arial, sans-serif" font-size="34" text-anchor="start" font-weight="700">Сдача работы и утверждение черновика</text>
+  <text x="36" y="807.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">ADR-001, ADR-002, ADR-003 · NFR-001, NFR-003, NFR-006, NFR-012</text>
+  <text x="36" y="832.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">КТ-2 · редакция 1 · 22.11.2026</text>
+  <rect x="17" y="112" width="192" height="60" rx="8" fill="#F0F4F8" stroke="#7891A8" stroke-width="1.4" />
+  <text x="113.0" y="136.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Студент</text>
+  <text x="113.0" y="158.26" fill="#4A6276" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">браузер</text>
+  <polyline points="113,172 113,707" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" stroke-dasharray="6 5" />
+  <rect x="257" y="112" width="192" height="60" rx="8" fill="#E7F3F3" stroke="#187579" stroke-width="1.4" />
+  <text x="353.0" y="136.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">API</text>
+  <text x="353.0" y="158.26" fill="#4A6276" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">права и оценка</text>
+  <polyline points="353,172 353,707" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" stroke-dasharray="6 5" />
+  <rect x="502" y="112" width="192" height="60" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="598.0" y="136.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">SQLite и файлы</text>
+  <text x="598.0" y="158.26" fill="#4A6276" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">закрытый том</text>
+  <polyline points="598,172 598,707" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" stroke-dasharray="6 5" />
+  <rect x="747" y="112" width="192" height="60" rx="8" fill="#E7F3F3" stroke="#187579" stroke-width="1.4" />
+  <text x="843.0" y="136.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Обработчик</text>
+  <text x="843.0" y="158.26" fill="#4A6276" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">PDF и ИИ</text>
+  <polyline points="843,172 843,707" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" stroke-dasharray="6 5" />
+  <rect x="987" y="112" width="192" height="60" rx="8" fill="#F0F4F8" stroke="#7891A8" stroke-width="1.4" />
+  <text x="1083.0" y="136.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Преподаватель</text>
+  <text x="1083.0" y="158.26" fill="#4A6276" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">браузер</text>
+  <polyline points="1083,172 1083,707" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" stroke-dasharray="6 5" />
+  <polyline points="113,210 353,210" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="116" y="185" width="234" height="22" fill="white" />
+  <text x="233.0" y="201.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">1. Отправить PDF</text>
+  <polyline points="353,254 598,254" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="356" y="229" width="239" height="22" fill="white" />
+  <text x="475.5" y="245.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">2. PDF и запись queued</text>
+  <polyline points="353,298 113,298" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="6 5" />
+  <rect x="116" y="273" width="234" height="22" fill="white" />
+  <text x="233.0" y="289.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">3. HTTP 201 и ID сдачи</text>
+  <polyline points="843,342 598,342" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="601" y="317" width="239" height="22" fill="white" />
+  <text x="720.5" y="333.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">4. Захватить queued</text>
+  <polyline points="598,386 843,386" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="6 5" />
+  <rect x="601" y="361" width="239" height="22" fill="white" />
+  <text x="720.5" y="377.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">5. PDF, версия и эталон</text>
+  <polyline points="843,430 598,430" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="601" y="405" width="239" height="22" fill="white" />
+  <text x="720.5" y="421.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">6. Проверить и записать draft</text>
+  <polyline points="1083,474 353,474" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="356" y="449" width="724" height="22" fill="white" />
+  <text x="718.0" y="465.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">7. Открыть PDF и черновик</text>
+  <polyline points="353,518 1083,518" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="6 5" />
+  <rect x="356" y="493" width="724" height="22" fill="white" />
+  <text x="718.0" y="509.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">8. Оригинал и строки задач</text>
+  <polyline points="1083,562 353,562" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="356" y="537" width="724" height="22" fill="white" />
+  <text x="718.0" y="553.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">9. Исправить и утвердить оценку</text>
+  <polyline points="353,606 598,606" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="356" y="581" width="239" height="22" fill="white" />
+  <text x="475.5" y="597.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">10. final и approved</text>
+  <polyline points="113,650 353,650" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="116" y="625" width="234" height="22" fill="white" />
+  <text x="233.0" y="641.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">11. Запросить результат</text>
+  <polyline points="353,694 113,694" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="6 5" />
+  <rect x="116" y="669" width="234" height="22" fill="white" />
+  <text x="233.0" y="685.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">12. Утверждённые баллы</text>
+  <text x="36" y="743.44" fill="#1D3349" font-family="Arial, sans-serif" font-size="16" text-anchor="start">На шаге 6 обработчик вызывает OCR и модель по HTTPS. Черновик и итог хранятся раздельно.</text>
+  <text x="36" y="776.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">Время идёт сверху вниз. Сплошная стрелка обозначает вызов или запись, пунктирная горизонтальная стрелка — ответ.</text>
+</svg>

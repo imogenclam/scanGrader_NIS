@@ -1,0 +1,39 @@
+{
+  "name": "scan-grader-web",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test": "node --test src/auth/loginRules.test.ts src/lib/api.test.ts",
+    "test:browser": "node tests/classroom.mjs",
+    "test:polling": "node tests/polling.mjs"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "5.101.2",
+    "@tanstack/react-router": "1.170.17",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "1.23.0",
+    "radix-ui": "1.6.1",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "sonner": "2.0.7",
+    "tailwind-merge": "3.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.2",
+    "@types/node": "22.20.0",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "4.7.0",
+    "playwright-core": "1.58.2",
+    "tailwindcss": "4.3.2",
+    "typescript": "5.9.3",
+    "vite": "6.4.3"
+  }
+}

@@ -1,0 +1,12 @@
+/data/
+/bin/
+/web/dist/
+/web/node_modules/
+/test-results/
+/coverage.out
+/scangrader
+/scangrader.exe
+.env
+*.db
+*.db-wal
+*.db-shm

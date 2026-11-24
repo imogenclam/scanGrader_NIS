@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="765" viewBox="0 0 1200 765" role="img" aria-labelledby="title desc">
+  <title id="title">D-02. Компоненты и границы доступа</title>
+  <desc id="desc">Архитектура Scan Grader. ADR-001, ADR-002, ADR-003 · NFR-001, NFR-002, NFR-003, NFR-004, NFR-009, NFR-011. Редакция КТ-2 от 22 ноября 2026 года.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 8" markerWidth="8" markerHeight="7" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#4A6276" />
+    </marker>
+  </defs>
+  <rect width="1200" height="765" fill="white" />
+  <text x="36" y="41.1" fill="#187579" font-family="Arial, sans-serif" font-size="15" text-anchor="start" font-weight="700">SCAN GRADER  /  АРХИТЕКТУРА  /  D-02</text>
+  <text x="36" y="88.56" fill="#1D3349" font-family="Arial, sans-serif" font-size="34" text-anchor="start" font-weight="700">Компоненты и границы доступа</text>
+  <text x="36" y="719.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">ADR-001, ADR-002, ADR-003 · NFR-001, NFR-002, NFR-003, NFR-004, NFR-009, NFR-011</text>
+  <text x="36" y="744.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">КТ-2 · редакция 1 · 22.11.2026</text>
+  <rect x="250" y="128" width="635" height="485" rx="8" fill="none" stroke="#93A7B6" stroke-dasharray="8 5" />
+  <text x="266" y="151.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start" font-weight="700">Один процесс Go и его локальные помощники</text>
+  <rect x="34" y="205" width="168" height="94" rx="8" fill="#F0F4F8" stroke="#7891A8" stroke-width="1.4" />
+  <text x="118.0" y="246.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Браузер</text>
+  <text x="118.0" y="269.28" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">React, PDF.js</text>
+  <rect x="284" y="190" width="256" height="106" rx="8" fill="#E7F3F3" stroke="#187579" stroke-width="1.4" />
+  <text x="412.0" y="226.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">HTTP API</text>
+  <text x="412.0" y="248.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Сессия, роль, предмет</text>
+  <text x="412.0" y="271.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">NFR-001, NFR-003</text>
+  <rect x="610" y="190" width="234" height="106" rx="8" fill="#E7F3F3" stroke="#187579" stroke-width="1.4" />
+  <text x="727.0" y="226.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Classroom</text>
+  <text x="727.0" y="248.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Задания, роли,</text>
+  <text x="727.0" y="271.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">проверка баллов</text>
+  <rect x="284" y="446" width="256" height="110" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="412.0" y="484.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Очередь сдач</text>
+  <text x="412.0" y="506.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Статус, захват записи,</text>
+  <text x="412.0" y="529.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">результат в SQLite</text>
+  <rect x="610" y="446" width="234" height="110" rx="8" fill="#E7F3F3" stroke="#187579" stroke-width="1.4" />
+  <text x="727.0" y="484.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Обработчик</text>
+  <text x="727.0" y="506.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">PDF, OCR, модель</text>
+  <text x="727.0" y="529.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">NFR-002, NFR-011</text>
+  <rect x="944" y="167" width="222" height="102" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="1055.0" y="201.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Закрытый том</text>
+  <text x="1055.0" y="223.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">SQLite WAL, PDF, .tex</text>
+  <text x="1055.0" y="246.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">NFR-007</text>
+  <rect x="944" y="328" width="222" height="86" rx="8" fill="#FFF3E2" stroke="#AB792F" stroke-width="1.4" />
+  <text x="1055.0" y="365.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Доставка кода</text>
+  <text x="1055.0" y="388.28" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">SMTP или каталог mail</text>
+  <rect x="944" y="467" width="222" height="102" rx="8" fill="#FFF3E2" stroke="#AB792F" stroke-width="1.4" />
+  <text x="1055.0" y="501.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">OCR и модель</text>
+  <text x="1055.0" y="523.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">HTTPS с таймаутами</text>
+  <text x="1055.0" y="546.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">NFR-009</text>
+  <polyline points="202,246 284,246" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="196" y="213" width="94" height="21" fill="white" />
+  <text x="243.0" y="228.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">REST</text>
+  <polyline points="540,246 610,246" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="534" y="214" width="82" height="21" fill="white" />
+  <text x="575.0" y="229.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">вызов</text>
+  <polyline points="844,223 944,223" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="841" y="193" width="107" height="21" fill="white" />
+  <text x="894.5" y="208.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">SQL / файлы</text>
+  <polyline points="412,296 412,446" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="306" y="361" width="212" height="21" fill="white" />
+  <text x="412.0" y="376.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">Приём, чтение статуса</text>
+  <polyline points="610,500 540,500" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="536" y="467" width="80" height="21" fill="white" />
+  <text x="576.0" y="482.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">захват</text>
+  <polyline points="727,446 727,394 897,394 897,249 944,249" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="739" y="368" width="139" height="21" fill="white" />
+  <text x="808.5" y="383.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">оригинал, эталон</text>
+  <polyline points="844,523 944,523" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="843" y="491" width="99" height="21" fill="white" />
+  <text x="892.5" y="506.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">HTTPS</text>
+  <polyline points="486,296 486,346 905,346 905,371 944,371" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="548" y="319" width="225" height="21" fill="white" />
+  <text x="660.5" y="334.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">регистрация / восстановление</text>
+  <text x="36" y="644.78" fill="#1D3349" font-family="Arial, sans-serif" font-size="17" text-anchor="start">HTTP API выдаёт PDF и эталон после проверки прав. Сетевой вызов ИИ проходит вне транзакции SQLite.</text>
+  <text x="36" y="688.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">Пунктир очерчивает приложение. Стрелки подписаны способом обмена. Статус очереди хранится на том же томе, что и остальные данные.</text>
+</svg>

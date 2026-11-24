@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" version="24.7.8">
+  <diagram name="D-01" id="D-01">
+    <mxGraphModel dx="1200" dy="650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="650" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#187579;fontStyle=1;spacing=0;" value="SCAN GRADER  /  АРХИТЕКТУРА  /  D-01">
+          <mxGeometry x="36" y="24" width="700" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="3" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=34;fontColor=#1D3349;fontStyle=1;spacing=0;" value="Контекст системы">
+          <mxGeometry x="36" y="56" width="1120" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="4" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#4A6276;fontStyle=0;spacing=0;" value="ADR-001, ADR-003 · NFR-002, NFR-003, NFR-008">
+          <mxGeometry x="36" y="588" width="1130" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="5" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#4A6276;fontStyle=0;spacing=0;" value="КТ-2 · редакция 1 · 22.11.2026">
+          <mxGeometry x="36" y="614" width="1130" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="6" vertex="1" parent="1" style="rounded=1;arcSize=4;fillColor=none;strokeColor=#93A7B6;dashed=1;dashPattern=8 5;" value="">
+          <mxGeometry x="381" y="152" width="390" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="7" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#4A6276;fontStyle=1;spacing=0;" value="Граница сервиса">
+          <mxGeometry x="397" y="159" width="358" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="8" vertex="1" parent="1" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#F0F4F8;strokeColor=#7891A8;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=17;fontFamily=Arial;fontColor=#1D3349;" value="&lt;b style=&quot;font-size:19px;&quot;&gt;Преподаватель&lt;/b&gt;&lt;br/&gt;Публикует задания&lt;br/&gt;и утверждает оценку">
+          <mxGeometry x="36" y="176" width="235" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9" vertex="1" parent="1" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#F0F4F8;strokeColor=#7891A8;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=17;fontFamily=Arial;fontColor=#1D3349;" value="&lt;b style=&quot;font-size:19px;&quot;&gt;Студент&lt;/b&gt;&lt;br/&gt;Сдаёт свой PDF&lt;br/&gt;и получает итог">
+          <mxGeometry x="36" y="336" width="235" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="10" vertex="1" parent="1" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#E7F3F3;strokeColor=#187579;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=17;fontFamily=Arial;fontColor=#1D3349;" value="&lt;b style=&quot;font-size:19px;&quot;&gt;Scan Grader&lt;/b&gt;&lt;br/&gt;Classroom, проверка и итог&lt;br/&gt;Контроль доступа · NFR-003">
+          <mxGeometry x="410" y="245" width="333" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="11" vertex="1" parent="1" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#FFF3E2;strokeColor=#AB792F;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=17;fontFamily=Arial;fontColor=#1D3349;" value="&lt;b style=&quot;font-size:19px;&quot;&gt;Почта по SMTP&lt;/b&gt;&lt;br/&gt;Код подтверждения&lt;br/&gt;или сброса пароля">
+          <mxGeometry x="920" y="120" width="244" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="12" vertex="1" parent="1" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#FFF3E2;strokeColor=#AB792F;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=17;fontFamily=Arial;fontColor=#1D3349;" value="&lt;b style=&quot;font-size:19px;&quot;&gt;Yandex Cloud OCR&lt;/b&gt;&lt;br/&gt;Изображения страниц&lt;br/&gt;в математический текст">
+          <mxGeometry x="920" y="259" width="244" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="13" vertex="1" parent="1" style="rounded=1;arcSize=8;html=1;whiteSpace=wrap;fillColor=#FFF3E2;strokeColor=#AB792F;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=17;fontFamily=Arial;fontColor=#1D3349;" value="&lt;b style=&quot;font-size:19px;&quot;&gt;Сервис модели&lt;/b&gt;&lt;br/&gt;Текст работы и эталон&lt;br/&gt;в черновик по задачам">
+          <mxGeometry x="920" y="398" width="244" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" style="strokeColor=#4A6276;strokeWidth=1.6;endArrow=block;endFill=1;rounded=0;noEdgeStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.2916666666666667;entryDx=0;entryDy=0;" source="8" target="10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="271" y="226" as="sourcePoint" />
+            <mxPoint x="410" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="226" />
+              <mxPoint x="350" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;fillColor=white;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#4A6276;fontStyle=0;spacing=0;" value="Веб / REST">
+          <mxGeometry x="273" y="195" width="104" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" style="strokeColor=#4A6276;strokeWidth=1.6;endArrow=block;endFill=1;rounded=0;noEdgeStyle=1;exitX=1.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.725;entryDx=0;entryDy=0;" source="9" target="10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="271" y="386" as="sourcePoint" />
+            <mxPoint x="410" y="332" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="386" />
+              <mxPoint x="350" y="332" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;fillColor=white;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#4A6276;fontStyle=0;spacing=0;" value="Веб / REST">
+          <mxGeometry x="273" y="389" width="104" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="18" edge="1" parent="1" style="strokeColor=#4A6276;strokeWidth=1.6;endArrow=block;endFill=1;rounded=0;noEdgeStyle=1;exitX=1.0;exitY=0.16666666666666666;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" source="10" target="11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="743" y="265" as="sourcePoint" />
+            <mxPoint x="920" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="821" y="265" />
+              <mxPoint x="821" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="19" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;fillColor=white;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#4A6276;fontStyle=0;spacing=0;" value="SMTP / TLS">
+          <mxGeometry x="790" y="139" width="128" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" style="strokeColor=#4A6276;strokeWidth=1.6;endArrow=block;endFill=1;rounded=0;noEdgeStyle=1;exitX=1.0;exitY=0.5083333333333333;exitDx=0;exitDy=0;entryX=0.0;entryY=0.47;entryDx=0;entryDy=0;" source="10" target="12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="743" y="306" as="sourcePoint" />
+            <mxPoint x="920" y="306" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="21" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;fillColor=white;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#4A6276;fontStyle=0;spacing=0;" value="HTTPS · страницы">
+          <mxGeometry x="770" y="278" width="134" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" style="strokeColor=#4A6276;strokeWidth=1.6;endArrow=block;endFill=1;rounded=0;noEdgeStyle=1;exitX=1.0;exitY=0.8333333333333334;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" source="10" target="13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="743" y="345" as="sourcePoint" />
+            <mxPoint x="920" y="448" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="821" y="345" />
+              <mxPoint x="821" y="448" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="23" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;fillColor=white;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#4A6276;fontStyle=0;spacing=0;" value="HTTPS · JSON">
+          <mxGeometry x="790" y="453" width="130" height="21" as="geometry" />
+        </mxCell>
+        <mxCell id="24" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=17;fontColor=#1D3349;fontStyle=0;spacing=0;" value="Без SMTP письмо записывается локально. При недоступности ИИ преподаватель оценивает исходный PDF.">
+          <mxGeometry x="36" y="511" width="1125" height="27" as="geometry" />
+        </mxCell>
+        <mxCell id="25" vertex="1" parent="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=15;fontColor=#4A6276;fontStyle=0;spacing=0;" value="Серые блоки обозначают пользователей, зелёный — сервис, охристые — внешние системы. Стрелки указывают инициатора обмена.">
+          <mxGeometry x="36" y="557" width="1125" height="22" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

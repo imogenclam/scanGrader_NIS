@@ -1,0 +1,1399 @@
+openapi: 3.0.3
+info:
+  title: Scan Grader
+  version: 0.2.0
+  description: REST-контракт учебной сборки КТ-2 от 24 ноября 2026 года. Идентификаторы ресурсов положительны. Пути совпадают
+    с маршрутизатором сервиса.
+servers:
+- url: /
+  description: Тот же узел, который обслуживает интерфейс.
+security:
+- session: []
+paths:
+  /healthz:
+    get:
+      operationId: health
+      summary: Проверить соединение с SQLite
+      tags:
+      - Состояние
+      security: []
+      responses:
+        '200':
+          description: Строка ok.
+          content:
+            text/plain:
+              schema:
+                type: string
+        '503':
+          description: Строка unavailable.
+          content:
+            text/plain:
+              schema:
+                type: string
+  /api/auth/check:
+    post:
+      operationId: checkLogin
+      summary: Перейти к вводу пароля
+      tags:
+      - Аккаунт
+      security: []
+      description: Одинаковый ответ для существующих и неизвестных идентификаторов.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - login
+              properties:
+                login:
+                  type: string
+              additionalProperties: false
+      responses:
+        '200':
+          description: Следующий шаг формы входа.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthCheck'
+        '400':
+          $ref: '#/components/responses/400'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/register:
+    post:
+      operationId: register
+      summary: Отправить код подтверждения адреса
+      tags:
+      - Аккаунт
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Register'
+      responses:
+        '200':
+          description: Начата регистрация.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegistrationStarted'
+        '400':
+          $ref: '#/components/responses/400'
+        '409':
+          $ref: '#/components/responses/409'
+        '429':
+          $ref: '#/components/responses/429'
+        '503':
+          $ref: '#/components/responses/503'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/verify-email:
+    post:
+      operationId: verifyEmail
+      summary: Подтвердить почту и открыть сессию
+      tags:
+      - Аккаунт
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Verify'
+      responses:
+        '200':
+          description: Адрес подтверждён, создан аккаунт.
+          headers:
+            Set-Cookie:
+              description: Сессионная cookie sg_session с HttpOnly и SameSite=Lax. Выход удаляет cookie.
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Verified'
+        '400':
+          $ref: '#/components/responses/400'
+        '409':
+          $ref: '#/components/responses/409'
+        '429':
+          $ref: '#/components/responses/429'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/login:
+    post:
+      operationId: login
+      summary: Войти по логину или почте и паролю
+      tags:
+      - Аккаунт
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Login'
+      responses:
+        '200':
+          description: Создана сессия.
+          headers:
+            Set-Cookie:
+              description: Сессионная cookie sg_session с HttpOnly и SameSite=Lax. Выход удаляет cookie.
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Session'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '429':
+          $ref: '#/components/responses/429'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/password/forgot:
+    post:
+      operationId: forgotPassword
+      summary: Запросить письмо для восстановления
+      tags:
+      - Аккаунт
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Forgot'
+      responses:
+        '200':
+          description: Общий ответ для корректно записанного адреса.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forgotten'
+        '400':
+          $ref: '#/components/responses/400'
+        '429':
+          $ref: '#/components/responses/429'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/password/reset:
+    post:
+      operationId: resetPassword
+      summary: Задать новый пароль по коду
+      tags:
+      - Аккаунт
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reset'
+      responses:
+        '200':
+          description: Пароль изменён, прежние сессии отозваны.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+        '400':
+          $ref: '#/components/responses/400'
+        '429':
+          $ref: '#/components/responses/429'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/logout:
+    post:
+      operationId: logoutAPI
+      summary: Завершить действующую сессию
+      tags:
+      - Аккаунт
+      responses:
+        '204':
+          description: Сессия закрыта.
+          headers:
+            Set-Cookie:
+              description: Сессионная cookie sg_session с HttpOnly и SameSite=Lax. Выход удаляет cookie.
+              schema:
+                type: string
+        '401':
+          $ref: '#/components/responses/401'
+        '500':
+          $ref: '#/components/responses/500'
+  /logout:
+    post:
+      operationId: logout
+      summary: Очистить cookie и завершить сессию при наличии
+      tags:
+      - Аккаунт
+      security: []
+      responses:
+        '204':
+          description: Cookie удалена.
+          headers:
+            Set-Cookie:
+              description: Сессионная cookie sg_session с HttpOnly и SameSite=Lax. Выход удаляет cookie.
+              schema:
+                type: string
+        '500':
+          $ref: '#/components/responses/500'
+  /api/me:
+    get:
+      operationId: currentUser
+      summary: Получить свой профиль
+      tags:
+      - Аккаунт
+      responses:
+        '200':
+          description: Профиль текущей сессии.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '401':
+          $ref: '#/components/responses/401'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/profile:
+    get:
+      operationId: profile
+      summary: Открыть личный кабинет
+      tags:
+      - Аккаунт
+      responses:
+        '200':
+          description: Профиль с полями user_type и group_number для формы аккаунта.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthUser'
+        '401':
+          $ref: '#/components/responses/401'
+        '500':
+          $ref: '#/components/responses/500'
+    put:
+      operationId: updateProfile
+      summary: Сохранить ФИО и группу
+      tags:
+      - Аккаунт
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+      responses:
+        '200':
+          description: Обновлённый профиль.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/subjects:
+    get:
+      operationId: mySubjects
+      summary: Получить список своих предметов
+      tags:
+      - Classroom
+      responses:
+        '200':
+          description: Предметы, доступные преподавателю или студенту.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SubjectInList'
+        '401':
+          $ref: '#/components/responses/401'
+        '500':
+          $ref: '#/components/responses/500'
+    post:
+      operationId: createSubject
+      summary: Создать предмет и получить код
+      tags:
+      - Classroom
+      description: Доступно преподавателю. Создатель получает доступ как преподаватель этого предмета.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SubjectInput'
+      responses:
+        '201':
+          description: Предмет создан.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubjectCreated'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/subjects/join:
+    post:
+      operationId: joinSubject
+      summary: Вступить в предмет по коду
+      tags:
+      - Classroom
+      description: Требуется студент с заполненными ФИО и группой. Повторное вступление сохраняет одну связь.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Join'
+      responses:
+        '200':
+          description: Идентификатор нового или уже доступного предмета.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ID'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '429':
+          $ref: '#/components/responses/429'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/subjects/{id}:
+    parameters:
+    - $ref: '#/components/parameters/ID'
+    get:
+      operationId: subject
+      summary: Открыть свой предмет
+      tags:
+      - Classroom
+      responses:
+        '200':
+          description: Карточка и список заданий.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubjectPage'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/subjects/{id}/assignments:
+    parameters:
+    - $ref: '#/components/parameters/ID'
+    post:
+      operationId: publish
+      summary: Опубликовать задание с закрытым эталоном
+      tags:
+      - Classroom
+      description: Доступно преподавателю предмета. Каждый успешный вызов создаёт новое задание.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PublicationForm'
+      responses:
+        '201':
+          description: Созданы задание и версия эталона.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Published'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '413':
+          $ref: '#/components/responses/413'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/assignments/{id}:
+    parameters:
+    - $ref: '#/components/parameters/ID'
+    get:
+      operationId: assignment
+      summary: Получить условия и список доступных сдач
+      tags:
+      - Classroom
+      responses:
+        '200':
+          description: Преподавателю видны сдачи предмета, студенту только собственная.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssignmentPage'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/assignments/{id}/reference:
+    parameters:
+    - $ref: '#/components/parameters/ID'
+    get:
+      operationId: reference
+      summary: Скачать закрытый эталон задания
+      tags:
+      - Classroom
+      responses:
+        '200':
+          description: Файл solutions.tex для преподавателя предмета.
+          content:
+            text/plain:
+              schema:
+                type: string
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/assignments/{id}/submissions:
+    parameters:
+    - $ref: '#/components/parameters/ID'
+    post:
+      operationId: submit
+      summary: Сдать PDF
+      tags:
+      - Classroom
+      description: Доступно студенту, вступившему в предмет. Пара «задание, студент» уникальна, в том числе при параллельных
+        запросах.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/SubmissionForm'
+      responses:
+        '201':
+          description: Принята первая сдача.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubmissionReceipt'
+              example: {id: 1, already_submitted: false}
+        '200':
+          description: Ранее принятая сдача. Исходный файл сохранён.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubmissionReceipt'
+              example: {id: 1, already_submitted: true}
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '413':
+          $ref: '#/components/responses/413'
+        '422':
+          $ref: '#/components/responses/422'
+        '503':
+          $ref: '#/components/responses/503'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/submissions/{id}:
+    parameters:
+    - $ref: '#/components/parameters/ID'
+    get:
+      operationId: submission
+      summary: Получить статус и доступную оценку
+      tags:
+      - Оценивание
+      description: Преподавателю предмета доступны черновик и причина ручной проверки. Автор получает итог после утверждения.
+      responses:
+        '200':
+          description: Сдача и условия задания.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkPage'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/submissions/{id}/pdf:
+    parameters:
+    - $ref: '#/components/parameters/ID'
+    get:
+      operationId: originalPDF
+      summary: Прочитать исходный PDF
+      tags:
+      - Оценивание
+      responses:
+        '200':
+          description: Оригинал работы для автора и преподавателя предмета.
+          content:
+            application/pdf:
+              schema:
+                type: string
+                format: binary
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/submissions/{id}/retry:
+    parameters:
+    - $ref: '#/components/parameters/ID'
+    post:
+      operationId: retryReview
+      summary: Повторить автоматическую проверку
+      tags:
+      - Оценивание
+      description: Один повтор из состояния manual преподавателем предмета при включённой ИИ-проверке. Признак can_retry приходит
+        в карточке сдачи.
+      responses:
+        '200':
+          description: Работа возвращена в очередь.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Queued'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '500':
+          $ref: '#/components/responses/500'
+  /api/submissions/{id}/approve:
+    parameters:
+    - $ref: '#/components/parameters/ID'
+    post:
+      operationId: approve
+      summary: Утвердить баллы по задачам
+      tags:
+      - Оценивание
+      description: Только преподаватель предмета. Принимает по одной строке для каждой задачи в состоянии draft или manual.
+        Повтор после успешного утверждения возвращает 409.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GradeInput'
+      responses:
+        '200':
+          description: Результат открыт автору.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Approved'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409'
+        '500':
+          $ref: '#/components/responses/500'
+components:
+  securitySchemes:
+    session:
+      type: apiKey
+      in: cookie
+      name: sg_session
+  parameters:
+    ID:
+      in: path
+      name: id
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+        success:
+          type: boolean
+        field:
+          type: string
+        suggestions:
+          type: array
+          items:
+            type: string
+        pending_registration:
+          type: boolean
+      description: Ошибки предметных маршрутов содержат error. Маршруты аккаунта могут также вернуть поле message и сведения
+        об ошибке формы.
+    ID:
+      type: object
+      required:
+      - id
+      properties:
+        id:
+          type: integer
+          minimum: 1
+    User:
+      type: object
+      required:
+      - id
+      - login
+      - role
+      - full_name
+      - group
+      - email
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        login:
+          type: string
+        role:
+          type: string
+          enum:
+          - student
+          - teacher
+        full_name:
+          type: string
+        group:
+          type: string
+        email:
+          type: string
+          description: В начальной и перенесённых учётных записях значение может быть пустым.
+        teacher_request_status:
+          type: string
+          enum:
+          - approved
+    AuthCheck:
+      type: object
+      required:
+      - exists
+      - next
+      properties:
+        exists:
+          type: boolean
+        next:
+          type: string
+          enum:
+          - password
+    Login:
+      type: object
+      required:
+      - login
+      - password
+      properties:
+        login:
+          type: string
+          description: Логин или подтверждённый адрес почты.
+        password:
+          type: string
+          format: password
+          writeOnly: true
+      additionalProperties: false
+    AuthUser:
+      type: object
+      required:
+      - id
+      - login
+      - role
+      - full_name
+      - group
+      - email
+      - user_type
+      - group_number
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        login:
+          type: string
+        role:
+          type: string
+          enum:
+          - student
+          - teacher
+        full_name:
+          type: string
+        group:
+          type: string
+        email:
+          type: string
+          description: В начальной и перенесённых учётных записях значение может быть пустым.
+        teacher_request_status:
+          type: string
+          enum:
+          - approved
+        user_type:
+          type: string
+          enum:
+          - student
+          - teacher
+        group_number:
+          type: string
+    Session:
+      type: object
+      required:
+      - success
+      - user
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        login:
+          type: string
+        role:
+          type: string
+          enum:
+          - student
+          - teacher
+        full_name:
+          type: string
+        group:
+          type: string
+        email:
+          type: string
+          description: В начальной и перенесённых учётных записях значение может быть пустым.
+        teacher_request_status:
+          type: string
+          enum:
+          - approved
+        success:
+          type: boolean
+        restored:
+          type: boolean
+        message:
+          type: string
+        user:
+          $ref: '#/components/schemas/AuthUser'
+    Register:
+      type: object
+      required:
+      - login
+      - email
+      - password
+      - full_name
+      properties:
+        login:
+          type: string
+          minLength: 3
+          maxLength: 30
+          example: student01
+        email:
+          type: string
+          format: email
+          example: student@example.org
+        password:
+          type: string
+          format: password
+          writeOnly: true
+          description: Не менее 8 символов и не более 72 байт UTF-8.
+        full_name:
+          type: string
+          minLength: 2
+          maxLength: 100
+        requested_role:
+          type: string
+          enum:
+          - student
+          - teacher
+        teacher_note:
+          type: string
+          maxLength: 500
+          description: Для преподавателя от 3 до 500 символов.
+        group:
+          type: string
+          maxLength: 40
+        group_number:
+          type: string
+          maxLength: 40
+        user_type:
+          type: string
+          description: Поле совместимости. Роль анкеты задаёт requested_role.
+      additionalProperties: false
+    RegistrationStarted:
+      type: object
+      required:
+      - success
+      - need_verify
+      - local_delivery
+      properties:
+        success:
+          type: boolean
+        need_verify:
+          type: boolean
+        teacher_request:
+          type: boolean
+        message:
+          type: string
+        local_delivery:
+          type: boolean
+    Verify:
+      type: object
+      required:
+      - email
+      - code
+      properties:
+        email:
+          type: string
+          format: email
+          example: student@example.org
+        code:
+          type: string
+          pattern: ^[0-9]{6}$
+          description: Шесть цифр из письма, в том числе начальные нули.
+      additionalProperties: false
+    Verified:
+      type: object
+      required:
+      - success
+      - user_id
+      - user_type
+      properties:
+        success:
+          type: boolean
+        user_id:
+          type: integer
+          minimum: 1
+        user_type:
+          type: string
+          enum:
+          - student
+          - teacher
+        teacher_request:
+          type: boolean
+        message:
+          type: string
+    Forgot:
+      type: object
+      required:
+      - email
+      properties:
+        email:
+          type: string
+          format: email
+          example: student@example.org
+      additionalProperties: false
+    Forgotten:
+      type: object
+      required:
+      - success
+      - message
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        local_delivery:
+          type: boolean
+    Reset:
+      type: object
+      required:
+      - email
+      - code
+      - new_password
+      properties:
+        email:
+          type: string
+          format: email
+          example: student@example.org
+        code:
+          type: string
+          pattern: ^[0-9]{6}$
+          description: Шесть цифр из письма, в том числе начальные нули.
+        new_password:
+          type: string
+          format: password
+          writeOnly: true
+          description: Не менее 8 символов и не более 72 байт UTF-8.
+      additionalProperties: false
+    Message:
+      type: object
+      required:
+      - success
+      - message
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+    Profile:
+      type: object
+      required:
+      - full_name
+      properties:
+        full_name:
+          type: string
+          minLength: 1
+          maxLength: 120
+        group:
+          type: string
+          maxLength: 40
+      additionalProperties: false
+    SubjectInput:
+      type: object
+      required:
+      - title
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 150
+          example: Арифметика
+        description:
+          type: string
+          maxLength: 2000
+      additionalProperties: false
+    SubjectCreated:
+      type: object
+      required:
+      - id
+      - invite_code
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        invite_code:
+          type: string
+          pattern: ^[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{6}$
+          description: Доступен преподавателю предмета.
+    Join:
+      type: object
+      required:
+      - code
+      properties:
+        code:
+          type: string
+          example: ' AB2CD3 '
+          description: Пробелы по краям удаляются, буквы переводятся в верхний регистр.
+      additionalProperties: false
+    Subject:
+      type: object
+      required:
+      - id
+      - title
+      - created_at
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        title:
+          type: string
+        description:
+          type: string
+        invite_code:
+          type: string
+          pattern: ^[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{6}$
+          description: Доступен преподавателю предмета.
+        created_at:
+          type: string
+          format: date-time
+    SubjectInList:
+      type: object
+      required:
+      - id
+      - title
+      - students
+      - assignments
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        title:
+          type: string
+        description:
+          type: string
+        invite_code:
+          type: string
+          pattern: ^[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{6}$
+          description: Доступен преподавателю предмета.
+        created_at:
+          type: string
+          format: date-time
+        students:
+          type: integer
+        assignments:
+          type: integer
+        latest_title:
+          type: string
+    SubjectPage:
+      type: object
+      required:
+      - subject
+      - assignments
+      properties:
+        subject:
+          $ref: '#/components/schemas/Subject'
+        assignments:
+          type: array
+          items:
+            type: object
+            required:
+            - id
+            - title
+            properties:
+              id:
+                type: integer
+                minimum: 1
+              title:
+                type: string
+    Task:
+      type: object
+      required:
+      - number
+      - max
+      properties:
+        number:
+          type: integer
+          minimum: 1
+          maximum: 1000
+        max:
+          type: number
+          minimum: 0
+          exclusiveMinimum: true
+          maximum: 10000
+    Tasks:
+      type: array
+      items:
+        $ref: '#/components/schemas/Task'
+      minItems: 1
+      maxItems: 100
+    Assignment:
+      type: object
+      required:
+      - id
+      - subject_id
+      - title
+      - statement
+      - tasks
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        subject_id:
+          type: integer
+          minimum: 1
+        subject_title:
+          type: string
+        title:
+          type: string
+        statement:
+          type: string
+        tasks:
+          $ref: '#/components/schemas/Tasks'
+    Published:
+      type: object
+      required:
+      - id
+      - reference_version
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        reference_version:
+          type: string
+          pattern: ^[a-f0-9]{64}$
+          description: SHA-256 исходных байтов эталона.
+    SubmissionReceipt:
+      type: object
+      required:
+      - id
+      - already_submitted
+      properties:
+        id:
+          type: integer
+          minimum: 1
+          description: Идентификатор принятой работы. При повторной сдаче возвращается тот же идентификатор.
+        already_submitted:
+          type: boolean
+          description: При создании сдачи возвращается false (201). Если сдача уже существует, в том числе из-за параллельного запроса, возвращается true (200).
+    SubmissionSummary:
+      type: object
+      required:
+      - id
+      - student
+      - group
+      - state
+      - submitted_at
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        student:
+          type: string
+        group:
+          type: string
+        state:
+          type: string
+          enum:
+          - waiting
+          - queued
+          - processing
+          - manual
+          - draft
+          - approved
+          description: Студент видит waiting до утверждения и approved после него.
+        submitted_at:
+          type: string
+          description: Момент сдачи в UTC.
+    AssignmentPage:
+      type: object
+      required:
+      - assignment
+      - submissions
+      properties:
+        assignment:
+          $ref: '#/components/schemas/Assignment'
+        submissions:
+          type: array
+          items:
+            $ref: '#/components/schemas/SubmissionSummary'
+    Grade:
+      type: object
+      required:
+      - number
+      - score
+      - comment
+      properties:
+        number:
+          type: integer
+          minimum: 1
+        score:
+          type: number
+          minimum: 0
+          description: Допускает дробное значение. Верхняя граница равна максимуму этой задачи.
+        comment:
+          type: string
+          minLength: 1
+          maxLength: 1000
+    Grades:
+      type: array
+      items:
+        $ref: '#/components/schemas/Grade'
+      minItems: 1
+      maxItems: 100
+    Submission:
+      type: object
+      required:
+      - id
+      - student
+      - group
+      - state
+      - submitted_at
+      - assignment_id
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        student:
+          type: string
+        group:
+          type: string
+        state:
+          type: string
+          enum:
+          - waiting
+          - queued
+          - processing
+          - manual
+          - draft
+          - approved
+          description: Студент видит waiting до утверждения и approved после него.
+        submitted_at:
+          type: string
+          description: Момент сдачи в UTC.
+        assignment_id:
+          type: integer
+          minimum: 1
+        reason:
+          type: string
+          description: Причина ручной проверки для преподавателя.
+        draft:
+          $ref: '#/components/schemas/Grades'
+        final:
+          $ref: '#/components/schemas/Grades'
+        approved_by:
+          type: string
+        approved_at:
+          type: string
+          format: date-time
+        can_retry:
+          type: boolean
+    WorkPage:
+      type: object
+      required:
+      - assignment
+      - submission
+      properties:
+        assignment:
+          $ref: '#/components/schemas/Assignment'
+        submission:
+          $ref: '#/components/schemas/Submission'
+    GradeInput:
+      type: object
+      required:
+      - grades
+      properties:
+        grades:
+          $ref: '#/components/schemas/Grades'
+      additionalProperties: false
+    Approved:
+      type: object
+      required:
+      - state
+      properties:
+        state:
+          type: string
+          enum:
+          - approved
+    Queued:
+      type: object
+      required:
+      - state
+      properties:
+        state:
+          type: string
+          enum:
+          - queued
+    PublicationForm:
+      type: object
+      required:
+      - title
+      - statement
+      - tasks
+      - reference
+      properties:
+        title:
+          type: string
+          minLength: 1
+          maxLength: 160
+        statement:
+          type: string
+          minLength: 1
+          maxLength: 16000
+        tasks:
+          type: string
+          description: Массив Task, сериализованный как текст JSON. Номера задач уникальны.
+          example: '[{"number":1,"max":1}]'
+        reference:
+          type: string
+          format: binary
+          description: Один непустой файл .tex, текст UTF-8 до 262144 байт.
+    SubmissionForm:
+      type: object
+      required:
+      - file
+      properties:
+        file:
+          type: string
+          format: binary
+          description: Один непустой файл .pdf, до 5 страниц и 20971520 байт.
+  responses:
+    '400':
+      description: Ошибка в данных запроса.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '401':
+      description: Требуется действующая сессия или верные данные для входа.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '403':
+      description: Роль, участие в предмете или авторство работы не дают доступа.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '404':
+      description: Запись или код предмета не найдены.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '409':
+      description: Операция конфликтует с текущим состоянием.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '413':
+      description: Файл превышает установленный размер.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '422':
+      description: В PDF обнаружена пустая или повреждённая страница со снимком.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '429':
+      description: Достигнут лимит попыток. Повторите запрос позднее.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '500':
+      description: Внутренняя ошибка сервера.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    '503':
+      description: Зависимость временно недоступна или заняты обработчики.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'

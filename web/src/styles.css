@@ -1,0 +1,368 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Дизайн-токены shadcn/ui (Tailwind v4, CSS-first).
+   Акцент — синий VisualMath (#2563eb), как в текущем интерфейсе. */
+:root {
+  --background: oklch(0.957 0.004 247);
+  --foreground: oklch(0.21 0.02 262);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.02 262);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.02 262);
+  --primary: oklch(0.546 0.215 262.9);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.961 0.005 247);
+  --secondary-foreground: oklch(0.21 0.02 262);
+  --muted: oklch(0.961 0.005 247);
+  --muted-foreground: oklch(0.551 0.016 256);
+  --accent: oklch(0.961 0.005 247);
+  --accent-foreground: oklch(0.21 0.02 262);
+  --destructive: oklch(0.577 0.245 27.3);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.922 0.005 247);
+  --input: oklch(0.922 0.005 247);
+  --ring: oklch(0.546 0.215 262.9);
+  --radius: 0.625rem;
+
+  /* статусы: текст, мягкий фон плашки, заливка под белый текст */
+  --success: oklch(52.7% 0.154 150.069);
+  --success-soft: oklch(96.2% 0.044 156.743);
+  --success-strong: oklch(62.7% 0.194 149.214);
+  --warning: oklch(55.5% 0.163 48.998);
+  --warning-soft: oklch(96.2% 0.059 95.617);
+  --info: oklch(48.8% 0.243 264.376);
+  --info-soft: oklch(93.2% 0.032 255.585);
+
+  /* Палитра графиков Plotly. Держим отдельными токенами в hex: SVG-атрибуты,
+     которыми Plotly красит холст и оси, не понимают oklch(). Значения —
+     те же цвета темы (card / foreground / muted-foreground / border). */
+  --plot-paper: #ffffff;
+  --plot-area: #f8fafc;
+  --plot-text: #131822;
+  --plot-text-dim: #6c727b;
+  --plot-grid: #e3e6e8;
+  --plot-axis: #374151;
+  --plot-zero: #64748b;
+  --plot-axis-bg: rgba(241, 245, 249, 0.6);
+  --plot-line: #2563eb;
+}
+
+.dark {
+  --background: oklch(0.18 0.015 256);
+  --foreground: oklch(0.93 0.005 247);
+  --card: oklch(0.22 0.015 256);
+  --card-foreground: oklch(0.93 0.005 247);
+  --popover: oklch(0.22 0.015 256);
+  --popover-foreground: oklch(0.93 0.005 247);
+  --primary: oklch(0.62 0.19 262.9);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.27 0.015 256);
+  --secondary-foreground: oklch(0.93 0.005 247);
+  --muted: oklch(0.27 0.015 256);
+  --muted-foreground: oklch(0.68 0.015 256);
+  --accent: oklch(0.27 0.015 256);
+  --accent-foreground: oklch(0.93 0.005 247);
+  --destructive: oklch(0.65 0.2 27.3);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.30 0.015 256);
+  --input: oklch(0.30 0.015 256);
+  --ring: oklch(0.62 0.19 262.9);
+
+  --success: oklch(79.2% 0.209 151.711);
+  --success-soft: oklch(26.6% 0.065 152.934);
+  --warning: oklch(82.8% 0.189 84.429);
+  --warning-soft: oklch(27.9% 0.077 45.635);
+  --info: oklch(70.7% 0.165 254.624);
+  --info-soft: oklch(28.2% 0.091 267.935);
+
+  --plot-paper: #161b22;
+  --plot-area: #12171d;
+  --plot-text: #e5e8eb;
+  --plot-text-dim: #9299a2;
+  --plot-grid: #292e35;
+  --plot-axis: #7d8590;
+  --plot-zero: #6b727c;
+  --plot-axis-bg: rgba(22, 27, 34, 0.6);
+  --plot-line: #60a5fa;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-success-strong: var(--success-strong);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: "Golos Text", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", ui-serif, Georgia, serif;
+  /* моноширинный для кодов подключения, инвайт-кодов и номеров вариантов */
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  /* системные контролы (чекбоксы, ползунки, скроллбары) под тему */
+  :root {
+    color-scheme: light;
+  }
+  :root.dark {
+    color-scheme: dark;
+  }
+  * {
+    border-color: var(--color-border);
+    outline-color: color-mix(in oklab, var(--color-ring) 50%, transparent);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    /* место под плашку cookie внизу */
+    padding-bottom: var(--consent-h, 0px);
+  }
+}
+
+/* На широком экране переход с короткой страницы на длинную сохраняет положение меню. */
+@media (min-width: 640px) {
+  html:has([data-app-shell]) {
+    scrollbar-gutter: stable;
+  }
+  html:has([data-app-shell]) body[data-scroll-locked] {
+    margin-right: 0 !important;
+  }
+}
+
+/* фиксированные кнопки внизу поднимаются над плашкой cookie */
+@utility above-consent {
+  margin-bottom: var(--consent-h, 0px);
+}
+
+/* Появление блоков при первом показе экрана, см. components/FadeUp.tsx.
+   Только opacity и transform; при reduce анимации нет, всё видно сразу.
+   --i: ступенька каскада 0..5, шаг 40 мс. */
+@keyframes vm-fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .vm-fade-up,
+  .vm-stagger > * {
+    animation: vm-fade-up 0.3s ease both;
+    animation-delay: calc(var(--i, 0) * 40ms);
+  }
+  /* stagger: каскад по детям, дальше шестого все вместе */
+  .vm-stagger > :nth-child(2) { --i: 1; }
+  .vm-stagger > :nth-child(3) { --i: 2; }
+  .vm-stagger > :nth-child(4) { --i: 3; }
+  .vm-stagger > :nth-child(5) { --i: 4; }
+  .vm-stagger > :nth-child(n + 6) { --i: 5; }
+}
+
+/* Контент модулей/лекций: сохранённый HTML со старого редактора + MathJax */
+.vm-content {
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+/* абзацы из обычного текста; в base — чтобы whitespace-* утилиты перебивали */
+@layer base {
+  .vm-content {
+    white-space: pre-line;
+  }
+}
+/* формула на своей строке уже блок — лишний перенос вокруг не нужен */
+.vm-content mjx-container[display='true'] {
+  white-space: normal;
+  margin: 0.4em 0;
+}
+
+/* Слайд на проекторе: кегль от высоты области, чтобы читалось с задних рядов */
+.vm-slide-text {
+  font-size: clamp(20px, 2.2vh + 12px, 32px);
+  line-height: 1.55;
+}
+.vm-slide-sub {
+  font-size: clamp(15px, 1.4vh + 9px, 24px);
+  line-height: 1.5;
+}
+.vm-student-slide-text {
+  font-size: clamp(15px, 1vh + 8px, 19px);
+  line-height: 1.7;
+}
+.vm-content img {
+  max-width: 100%;
+  border-radius: var(--radius-md);
+}
+.vm-content h1, .vm-content h2, .vm-content h3 {
+  font-weight: 600;
+  margin: 1em 0 0.5em;
+}
+.vm-content p { margin: 0.85em 0; }
+.vm-content p:first-child { margin-top: 0; }
+.vm-content p:last-child { margin-bottom: 0; }
+/* \smallskip и родня: отступ от кегля, а не в пикселях */
+.vm-content .vm-skip { display: block; }
+.vm-content .vm-skip-sm { height: 0.5em; }
+.vm-content .vm-skip-md { height: 1em; }
+.vm-content .vm-skip-lg { height: 2em; }
+.vm-content ul, .vm-content ol { padding-left: 1.5em; margin: 0.5em 0; }
+.vm-content ul { list-style: disc; }
+.vm-content ol { list-style: decimal; }
+.vm-content li.vm-item-custom { list-style: none; }
+.vm-content a { color: var(--color-primary); text-decoration: underline; }
+.vm-content mjx-container { overflow-x: auto; overflow-y: hidden; }
+/* тень у края широкой формулы: видно, что дальше есть продолжение; фон тени под цвет подложки */
+:root {
+  --vm-scroll-bg: var(--background);
+  --vm-scroll-shade: rgba(100, 116, 139, 0.4);
+}
+[class*='bg-card'] { --vm-scroll-bg: var(--card); }
+[class*='bg-popover'] { --vm-scroll-bg: var(--popover); }
+.bg-muted { --vm-scroll-bg: var(--muted); }
+.vm-content mjx-container[display='true'] {
+  scrollbar-width: thin;
+  scrollbar-color: var(--vm-scroll-shade) transparent;
+  background:
+    linear-gradient(to right, var(--vm-scroll-bg) 35%, rgba(0, 0, 0, 0)) left center / 1.5rem 100% no-repeat local,
+    linear-gradient(to left, var(--vm-scroll-bg) 35%, rgba(0, 0, 0, 0)) right center / 1.5rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, var(--vm-scroll-shade), rgba(0, 0, 0, 0)) left center / 0.6rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, var(--vm-scroll-shade), rgba(0, 0, 0, 0)) right center / 0.6rem 100% no-repeat scroll;
+}
+/* tabular, теоремы и сноски из formatText */
+.vm-content .vm-table {
+  --vm-rule: color-mix(in oklab, var(--foreground) 55%, transparent);
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0.5em 0;
+}
+.vm-content .vm-table table { border-collapse: collapse; margin: 0 auto; }
+.vm-content .vm-table td { padding: 0.2em 0.75em; vertical-align: top; }
+.vm-content .vm-table table.vm-ruled td { border-inline: 1px solid var(--vm-rule); }
+.vm-content .vm-table tr.vm-top td { border-top: 1px solid var(--vm-rule); }
+.vm-content .vm-table tr.vm-bottom td { border-bottom: 1px solid var(--vm-rule); }
+.vm-content .vm-thm { display: flow-root; margin: 0.6em 0; }
+.vm-content .vm-qed { float: right; margin-left: 0.5em; }
+.vm-content .vm-center { text-align: center; }
+.vm-content .vm-right { text-align: right; }
+.vm-content .vm-quote { margin: 0.5em 0 0.5em 1.5em; }
+.vm-content .vm-fn { font-size: 0.72em; line-height: 0; }
+.vm-content .vm-footnotes { margin-top: 0.8em; padding-top: 0.4em; border-top: 1px solid var(--border); font-size: 0.85em; }
+/* Ошибка разбора формулы: MathJax красит её жёлто-красным мимо темы —
+   переводим на токен ошибки, чтобы читалось в обеих темах. */
+mjx-merror {
+  background-color: color-mix(in oklab, var(--destructive) 14%, transparent) !important;
+  color: var(--destructive) !important;
+  border-radius: 0.25rem;
+  padding: 0 0.2em;
+}
+
+/* Горизонтальная прокрутка без видимой полосы (табы, ряды чипов на телефоне) */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Пальцем по мелкой кнопке: невидимая зона 44px, вид не меняется */
+/* в слое: fixed и absolute у самой кнопки сильнее, иначе плавающая кнопка встаёт в текст */
+@layer components {
+  @media (pointer: coarse) {
+    [data-slot='button'][data-size='xs'],
+    [data-slot='button'][data-size='sm'],
+    [data-slot='button'][data-size='default'],
+    [data-slot='button'][data-size='icon'],
+    [data-slot='button'][data-size='icon-xs'],
+    [data-slot='button'][data-size='icon-sm'],
+    .vm-tap {
+      position: relative;
+    }
+  }
+}
+@media (pointer: coarse) {
+  [data-slot='button'][data-size='xs']::after,
+  [data-slot='button'][data-size='sm']::after,
+  [data-slot='button'][data-size='default']::after,
+  [data-slot='button'][data-size='icon']::after,
+  [data-slot='button'][data-size='icon-xs']::after,
+  [data-slot='button'][data-size='icon-sm']::after,
+  .vm-tap::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: max(100%, 44px);
+    transform: translate(-50%, -50%);
+  }
+  /* правки по наведению на тач-экране не появляются — показываем всегда */
+  .vm-touch-visible {
+    opacity: 1 !important;
+  }
+}
+
+/* прокрутка только у длинных формул */
+.vm-math-wide {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+}
+/* скрытая копия для чтения с экрана шире формулы и рисует лишнюю полосу */
+.vm-math-wide mjx-assistive-mml {
+  max-width: 100% !important;
+}
+
+/* таблица-блок статьи: сетка с заголовком */
+.vm-content .vm-table table.vm-grid { margin: 0; min-width: 50%; }
+.vm-content .vm-table table.vm-grid th,
+.vm-content .vm-table table.vm-grid td { border: 1px solid var(--border); padding: 0.35em 0.75em; text-align: left; }
+.vm-content .vm-table table.vm-grid th { font-weight: 600; background: var(--muted); }
+
+/* заголовки статьи: якорь и кнопка «скопировать ссылку» */
+.vm-content .vm-anchored { scroll-margin-top: 6rem; }
+.vm-content .vm-anchor {
+  margin-left: 0.35em;
+  padding: 0 0.3em;
+  border-radius: 0.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--muted-foreground);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.vm-content .vm-anchored:hover .vm-anchor,
+.vm-content .vm-anchor:focus-visible { opacity: 1; }
+@media (pointer: coarse) {
+  .vm-content .vm-anchor { opacity: 0.55; min-width: 2.75rem; min-height: 2.75rem; }
+  /* «#» не уходит один на новую строку: под него место справа, строку не раздувает */
+  .vm-content .vm-anchored { padding-right: 2.75rem; }
+  .vm-content .vm-anchor { margin: -0.5rem -2.75rem -0.5rem 0; vertical-align: middle; }
+}

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="910" viewBox="0 0 1200 910" role="img" aria-labelledby="title desc">
+  <title id="title">D-04. Ключи и связи в SQLite</title>
+  <desc id="desc">Архитектура Scan Grader. ADR-002, ADR-003 · NFR-002, NFR-003, NFR-007, NFR-012. Редакция КТ-2 от 22 ноября 2026 года.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 8" markerWidth="8" markerHeight="7" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#4A6276" />
+    </marker>
+  </defs>
+  <rect width="1200" height="910" fill="white" />
+  <text x="36" y="41.1" fill="#187579" font-family="Arial, sans-serif" font-size="15" text-anchor="start" font-weight="700">SCAN GRADER  /  АРХИТЕКТУРА  /  D-04</text>
+  <text x="36" y="88.56" fill="#1D3349" font-family="Arial, sans-serif" font-size="34" text-anchor="start" font-weight="700">Ключи и связи в SQLite</text>
+  <text x="36" y="864.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">ADR-002, ADR-003 · NFR-002, NFR-003, NFR-007, NFR-012</text>
+  <text x="36" y="889.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">КТ-2 · редакция 1 · 22.11.2026</text>
+  <rect x="28" y="116" width="1144" height="595" rx="8" fill="none" stroke="#93A7B6" stroke-dasharray="8 5" />
+  <text x="44" y="139.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start" font-weight="700">Закрытый том · внешние ключи SQLite · NFR-003, NFR-007</text>
+  <rect x="60" y="177" width="255" height="122" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="187.5" y="209.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">users</text>
+  <text x="187.5" y="231.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">PK id · UQ login_key</text>
+  <text x="187.5" y="254.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">email, role, password_hash</text>
+  <text x="187.5" y="277.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">full_name, group_number</text>
+  <rect x="453" y="177" width="254" height="122" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="580.0" y="209.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">subjects</text>
+  <text x="580.0" y="231.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">PK id · FK created_by</text>
+  <text x="580.0" y="254.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">UQ invite_code</text>
+  <text x="580.0" y="277.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">title, description</text>
+  <rect x="839" y="177" width="295" height="122" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="986.5" y="209.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">assignments</text>
+  <text x="986.5" y="231.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">PK id · FK subject_id</text>
+  <text x="986.5" y="254.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">tasks, reference_file,</text>
+  <text x="986.5" y="277.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">reference_version (SHA-256)</text>
+  <rect x="60" y="394" width="255" height="119" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="187.5" y="436.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">sessions</text>
+  <text x="187.5" y="458.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">PK token_hash · FK user_id</text>
+  <text x="187.5" y="481.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">expires_at</text>
+  <rect x="453" y="373" width="254" height="100" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="580.0" y="417.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">subject_teachers</text>
+  <text x="580.0" y="439.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">PK / FK subject_id, teacher_id</text>
+  <rect x="453" y="535" width="254" height="100" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="580.0" y="579.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">subject_students</text>
+  <text x="580.0" y="601.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">PK / FK subject_id, student_id</text>
+  <rect x="839" y="390" width="295" height="204" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="986.5" y="429.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">submissions</text>
+  <text x="986.5" y="451.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">PK id · FK assignment_id</text>
+  <text x="986.5" y="474.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">FK student_id, approved_by</text>
+  <text x="986.5" y="497.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">UQ (assignment_id, student_id)</text>
+  <text x="986.5" y="520.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">pdf_file, reference_version,</text>
+  <text x="986.5" y="543.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">state, draft, final, approved_at,</text>
+  <text x="986.5" y="566.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">retry_count ∈ {0, 1}</text>
+  <rect x="60" y="548" width="255" height="127" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="187.5" y="583.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">email_verifications</text>
+  <text x="187.5" y="605.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">PK email · code, data_json</text>
+  <text x="187.5" y="628.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">expires_at, attempts, sent_at</text>
+  <text x="187.5" y="651.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">Регистрация и сброс</text>
+  <polyline points="315,234 453,234" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="320" y="205" width="129" height="21" fill="white" />
+  <text x="384.5" y="220.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">1 : N · создаёт</text>
+  <polyline points="707,234 839,234" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="711" y="206" width="126" height="21" fill="white" />
+  <text x="774.0" y="221.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">1 : N · задания</text>
+  <polyline points="179,299 179,394" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="91" y="333" width="174" height="21" fill="white" />
+  <text x="178.0" y="348.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">1 : N · сессии</text>
+  <polyline points="565,299 565,373" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="507" y="325" width="118" height="21" fill="white" />
+  <text x="566.0" y="340.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">1 : N</text>
+  <polyline points="637,299 637,325 751,325 751,585 707,585" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="715" y="495" width="72" height="21" fill="white" />
+  <text x="751.0" y="510.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">1 : N</text>
+  <polyline points="315,270 390,270 390,423 453,423" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="338" y="388" width="108" height="21" fill="white" />
+  <text x="392.0" y="403.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">1 : N</text>
+  <polyline points="315,285 364,285 364,583 453,583" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="349" y="550" width="104" height="21" fill="white" />
+  <text x="401.0" y="565.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">1 : N</text>
+  <polyline points="982,299 982,390" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="912" y="332" width="141" height="21" fill="white" />
+  <text x="982.5" y="347.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">1 : N · сдачи</text>
+  <polyline points="188,177 188,157 1149,157 1149,505 1134,505" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="750" y="130" width="333" height="21" fill="white" />
+  <text x="916.5" y="145.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">1 : N · автор / утвердивший</text>
+  <text x="36" y="748.44" fill="#1D3349" font-family="Arial, sans-serif" font-size="16" text-anchor="start">tasks, draft и final содержат JSON. Файлы PDF и .tex находятся вне БД. Их имена хранятся в строках заданий и сдач.</text>
+  <text x="36" y="780.44" fill="#1D3349" font-family="Arial, sans-serif" font-size="16" text-anchor="start">Ключи подтверждения и сброса разделены префиксом. Для адресов действующих аккаунтов применяется уникальный индекс.</text>
+  <text x="36" y="833.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">PK — первичный ключ, FK — внешний ключ, UQ — ограничение уникальности. Стрелка 1 : N идёт от родителя к зависимым строкам.</text>
+</svg>

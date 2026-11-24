@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">D-01. Контекст системы</title>
+  <desc id="desc">Архитектура Scan Grader. ADR-001, ADR-003 · NFR-002, NFR-003, NFR-008. Редакция КТ-2 от 22 ноября 2026 года.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 8" markerWidth="8" markerHeight="7" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#4A6276" />
+    </marker>
+  </defs>
+  <rect width="1200" height="650" fill="white" />
+  <text x="36" y="41.1" fill="#187579" font-family="Arial, sans-serif" font-size="15" text-anchor="start" font-weight="700">SCAN GRADER  /  АРХИТЕКТУРА  /  D-01</text>
+  <text x="36" y="88.56" fill="#1D3349" font-family="Arial, sans-serif" font-size="34" text-anchor="start" font-weight="700">Контекст системы</text>
+  <text x="36" y="604.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">ADR-001, ADR-003 · NFR-002, NFR-003, NFR-008</text>
+  <text x="36" y="629.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">КТ-2 · редакция 1 · 22.11.2026</text>
+  <rect x="381" y="152" width="390" height="300" rx="8" fill="none" stroke="#93A7B6" stroke-dasharray="8 5" />
+  <text x="397" y="175.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start" font-weight="700">Граница сервиса</text>
+  <rect x="36" y="176" width="235" height="100" rx="8" fill="#F0F4F8" stroke="#7891A8" stroke-width="1.4" />
+  <text x="153.5" y="209.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Преподаватель</text>
+  <text x="153.5" y="231.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Публикует задания</text>
+  <text x="153.5" y="254.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">и утверждает оценку</text>
+  <rect x="36" y="336" width="235" height="100" rx="8" fill="#F0F4F8" stroke="#7891A8" stroke-width="1.4" />
+  <text x="153.5" y="369.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Студент</text>
+  <text x="153.5" y="391.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Сдаёт свой PDF</text>
+  <text x="153.5" y="414.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">и получает итог</text>
+  <rect x="410" y="245" width="333" height="120" rx="8" fill="#E7F3F3" stroke="#187579" stroke-width="1.4" />
+  <text x="576.5" y="288.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Scan Grader</text>
+  <text x="576.5" y="310.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Classroom, проверка и итог</text>
+  <text x="576.5" y="333.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Контроль доступа · NFR-003</text>
+  <rect x="920" y="120" width="244" height="100" rx="8" fill="#FFF3E2" stroke="#AB792F" stroke-width="1.4" />
+  <text x="1042.0" y="153.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Почта по SMTP</text>
+  <text x="1042.0" y="175.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Код подтверждения</text>
+  <text x="1042.0" y="198.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">или сброса пароля</text>
+  <rect x="920" y="259" width="244" height="100" rx="8" fill="#FFF3E2" stroke="#AB792F" stroke-width="1.4" />
+  <text x="1042.0" y="292.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Yandex Cloud OCR</text>
+  <text x="1042.0" y="314.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Изображения страниц</text>
+  <text x="1042.0" y="337.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">в математический текст</text>
+  <rect x="920" y="398" width="244" height="100" rx="8" fill="#FFF3E2" stroke="#AB792F" stroke-width="1.4" />
+  <text x="1042.0" y="431.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Сервис модели</text>
+  <text x="1042.0" y="453.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Текст работы и эталон</text>
+  <text x="1042.0" y="476.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">в черновик по задачам</text>
+  <polyline points="271,226 350,226 350,280 410,280" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="273" y="195" width="104" height="21" fill="white" />
+  <text x="325.0" y="210.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">Веб / REST</text>
+  <polyline points="271,386 350,386 350,332 410,332" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="273" y="389" width="104" height="21" fill="white" />
+  <text x="325.0" y="404.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">Веб / REST</text>
+  <polyline points="743,265 821,265 821,170 920,170" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="790" y="139" width="128" height="21" fill="white" />
+  <text x="854.0" y="154.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">SMTP / TLS</text>
+  <polyline points="743,306 920,306" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="770" y="278" width="134" height="21" fill="white" />
+  <text x="837.0" y="293.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">HTTPS · страницы</text>
+  <polyline points="743,345 821,345 821,448 920,448" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="790" y="453" width="130" height="21" fill="white" />
+  <text x="855.0" y="468.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">HTTPS · JSON</text>
+  <text x="36" y="530.28" fill="#1D3349" font-family="Arial, sans-serif" font-size="17" text-anchor="start">Без SMTP письмо записывается локально. При недоступности ИИ преподаватель оценивает исходный PDF.</text>
+  <text x="36" y="573.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">Серые блоки обозначают пользователей, зелёный — сервис, охристые — внешние системы. Стрелки указывают инициатора обмена.</text>
+</svg>

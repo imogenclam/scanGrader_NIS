@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="745" viewBox="0 0 1200 745" role="img" aria-labelledby="title desc">
+  <title id="title">D-03. Развёртывание на одной учебной ВМ</title>
+  <desc id="desc">Архитектура Scan Grader. ADR-001, ADR-002, ADR-004 · NFR-003, NFR-005, NFR-006, NFR-007. Редакция КТ-2 от 22 ноября 2026 года.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 8" markerWidth="8" markerHeight="7" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#4A6276" />
+    </marker>
+  </defs>
+  <rect width="1200" height="745" fill="white" />
+  <text x="36" y="41.1" fill="#187579" font-family="Arial, sans-serif" font-size="15" text-anchor="start" font-weight="700">SCAN GRADER  /  АРХИТЕКТУРА  /  D-03</text>
+  <text x="36" y="88.56" fill="#1D3349" font-family="Arial, sans-serif" font-size="34" text-anchor="start" font-weight="700">Развёртывание на одной учебной ВМ</text>
+  <text x="36" y="699.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">ADR-001, ADR-002, ADR-004 · NFR-003, NFR-005, NFR-006, NFR-007</text>
+  <text x="36" y="724.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">КТ-2 · редакция 1 · 22.11.2026</text>
+  <rect x="302" y="124" width="599" height="463" rx="8" fill="none" stroke="#93A7B6" stroke-dasharray="8 5" />
+  <text x="318" y="147.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start" font-weight="700">Целевой профиль S1 · Linux, 2 vCPU, 4 ГБ RAM</text>
+  <rect x="35" y="180" width="194" height="96" rx="8" fill="#F0F4F8" stroke="#7891A8" stroke-width="1.4" />
+  <text x="132.0" y="222.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Клиент</text>
+  <text x="132.0" y="245.28" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Браузер / API</text>
+  <rect x="337" y="180" width="219" height="96" rx="8" fill="#F7F9FC" stroke="#9EADBC" stroke-width="1.4" />
+  <text x="446.5" y="222.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">HTTPS-прокси</text>
+  <text x="446.5" y="244.94" fill="#4A6276" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Настраивается на ВМ</text>
+  <rect x="640" y="180" width="223" height="96" rx="8" fill="#E7F3F3" stroke="#187579" stroke-width="1.4" />
+  <text x="751.5" y="222.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Контейнер app</text>
+  <text x="751.5" y="245.28" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Go + React + Ghostscript</text>
+  <rect x="640" y="406" width="223" height="104" rx="8" fill="#F0F1FC" stroke="#7375A8" stroke-width="1.4" />
+  <text x="751.5" y="441.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Том classroom</text>
+  <text x="751.5" y="463.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">/data · SQLite, файлы,</text>
+  <text x="751.5" y="486.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">локальная почта</text>
+  <rect x="337" y="406" width="219" height="104" rx="8" fill="#F7F9FC" stroke="#9EADBC" stroke-width="1.4" />
+  <text x="446.5" y="441.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Окружение</text>
+  <text x="446.5" y="463.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Ключи OCR, модели,</text>
+  <text x="446.5" y="486.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">SMTP и Secure-cookie</text>
+  <rect x="954" y="180" width="213" height="96" rx="8" fill="#FFF3E2" stroke="#AB792F" stroke-width="1.4" />
+  <text x="1060.5" y="222.96" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Внешние API</text>
+  <text x="1060.5" y="245.28" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">OCR, модель, SMTP</text>
+  <rect x="954" y="406" width="213" height="104" rx="8" fill="#F7F9FC" stroke="#9EADBC" stroke-width="1.4" />
+  <text x="1060.5" y="441.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">Резервная копия</text>
+  <text x="1060.5" y="463.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Согласованная копия</text>
+  <text x="1060.5" y="486.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">вне ВМ · NFR-007</text>
+  <rect x="35" y="406" width="194" height="104" rx="8" fill="#F0F4F8" stroke="#7891A8" stroke-width="1.4" />
+  <text x="132.0" y="441.46" fill="#1D3349" font-family="Arial, sans-serif" font-size="19" text-anchor="middle" font-weight="700">GitHub Actions</text>
+  <text x="132.0" y="463.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">Проверки и сборка</text>
+  <text x="132.0" y="486.78" fill="#4A6276" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">образа · NFR-006</text>
+  <polyline points="229,227 337,227" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="239" y="198" width="89" height="21" fill="white" />
+  <text x="283.5" y="213.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">HTTPS</text>
+  <polyline points="556,227 640,227" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="550" y="185" width="95" height="21" fill="white" />
+  <text x="597.5" y="200.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">HTTP¹</text>
+  <polyline points="863,227 954,227" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="864" y="195" width="94" height="21" fill="white" />
+  <text x="911.0" y="210.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">TLS</text>
+  <polyline points="753,276 753,406" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="656" y="327" width="194" height="21" fill="white" />
+  <text x="753.0" y="342.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">чтение и запись</text>
+  <polyline points="448,406 448,335 663,335 663,276" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" />
+  <rect x="488" y="308" width="132" height="21" fill="white" />
+  <text x="554.0" y="323.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">.env / env_file</text>
+  <polyline points="863,458 954,458" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="6 5" />
+  <rect x="855" y="422" width="104" height="21" fill="white" />
+  <text x="907.0" y="437.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">копия²</text>
+  <polyline points="229,457 273,457 273,314 601,314 601,263 640,263" fill="none" stroke="#4A6276" stroke-width="1.7" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="6 5" />
+  <rect x="300" y="286" width="227" height="21" fill="white" />
+  <text x="413.5" y="301.6" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">план CD по digest²</text>
+  <text x="36" y="614.94" fill="#1D3349" font-family="Arial, sans-serif" font-size="16" text-anchor="start">¹ Compose публикует 127.0.0.1:8080 → app:8080. GET /healthz проверяет доступ к БД. Прокси настраивает владелец ВМ.</text>
+  <text x="36" y="645.44" fill="#1D3349" font-family="Arial, sans-serif" font-size="16" text-anchor="start">² Доставка образа и восстановление по резервной копии запланированы. Проверки КТ-2 запускаются отдельно от ВМ.</text>
+  <text x="36" y="668.1" fill="#4A6276" font-family="Arial, sans-serif" font-size="15" text-anchor="start">Сплошная стрелка обозначает рабочее соединение, пунктирная — запланированную операцию на ВМ.</text>
+</svg>
