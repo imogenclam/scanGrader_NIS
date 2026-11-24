@@ -67,6 +67,6 @@ python3 tests/demo_api.py
 | Этап | Версия и статус | Результат |
 | --- | --- | --- |
 | КТ-1 | [cp1-r3](https://github.com/imogenclam/scanGrader_NIS/tree/cp1-r3) · [6409f7a6dfde55a056cbcce9bfade47b7742e70f](https://github.com/imogenclam/scanGrader_NIS/commit/6409f7a6dfde55a056cbcce9bfade47b7742e70f) | Описаны границы проекта и роли команды. [Документы КТ-1](#документы-кт-1) |
-| КТ-2 | 24.11.2026 · [cp2-r2](https://github.com/imogenclam/scanGrader_NIS/tree/cp2-r2) · [Коммит версии](https://github.com/imogenclam/scanGrader_NIS/commits/cp2-r2/) · [GitHub Actions](https://github.com/imogenclam/scanGrader_NIS/actions?query=branch%3Acp2-r2) | Преподаватель утверждает оценку через API, после чего студент может её прочитать. [Материалы КТ-2](#материалы-кт-2) · [Запуск](#запуск-и-пример-запроса) · [Протокол](docs/quality/baseline.md) |
+| КТ-2 | 24.11.2026 · [cp2-r2](https://github.com/imogenclam/scanGrader_NIS/tree/cp2-r2) · [b23b18b83ea02b7ce0e6707df4c4ea84a0c5ba0c](https://github.com/imogenclam/scanGrader_NIS/commit/b23b18b83ea02b7ce0e6707df4c4ea84a0c5ba0c) · [GitHub Actions](https://github.com/imogenclam/scanGrader_NIS/actions/runs/45469503310) | Преподаватель утверждает оценку через API, после чего студент может её прочитать. [Материалы КТ-2](#материалы-кт-2) · [Запуск](#запуск-и-пример-запроса) · [Протокол](docs/quality/baseline.md) |
 | КТ-3 | Запланировано | Приёмка обязательных историй MVP и автоматическая доставка на учебную ВМ |
 | КТ-4 | Запланировано | Итоговые испытания и проверка восстановления данных |
