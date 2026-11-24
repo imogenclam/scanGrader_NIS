@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1440" height="860" viewBox="0 0 1440 860" role="img" aria-labelledby="title description" data-page="D-03">
   <title id="title">D-03. Размещение приложения</title>
-  <desc id="description">Compose запускает сервис app. По умолчанию клиент обращается к порту 8080 на том же хосте. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
+  <desc id="description">Compose запускает сервис app, который по умолчанию доступен на порту 8080 только с этого хоста. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
   <defs>
     <marker id="arrow-regular" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
       <path fill="#496778" d="M0,0 L10,4 L0,8 Z" />
@@ -22,7 +22,7 @@
   <rect x="40" y="56" width="88" height="41" rx="4" fill="#17675F" stroke="#17675F" stroke-width="1.5" data-cell="d03-id" />
   <text x="84" y="84.112" fill="#FFFFFF" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-4">D-03</text>
   <text x="150" y="89.302" fill="#19313D" text-anchor="start" font-size="37" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-5">Размещение приложения</text>
-  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-6">Compose запускает сервис app. По умолчанию клиент обращается к порту 8080 на том же хосте.</text>
+  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-6">Compose запускает сервис app, который по умолчанию доступен на порту 8080 только с этого хоста.</text>
   <polyline points="40,151 1400,151" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d03-item-7" />
   <rect x="40" y="175" width="1360" height="420" rx="10" fill="#FCFEFD" stroke="#A8BEB8" stroke-width="1.5" data-cell="d03-host" />
   <text x="57" y="200.344" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-9">ЛОКАЛЬНЫЙ ХОСТ  /  DOCKER COMPOSE</text>
@@ -34,13 +34,13 @@
   <text x="589" y="250.344" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-15">СЕТЬ COMPOSE  /  СЕРВИС APP</text>
   <rect x="596" y="276" width="425" height="169" rx="8" fill="#E9F4EF" stroke="#4D8A7E" stroke-width="1.5" data-cell="d03-app" />
   <text x="611" y="299.325" fill="#17675F" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-17">КОНТЕЙНЕР</text>
-  <text x="611" y="330.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-18">Бинарник scangrader</text>
-  <text x="611" y="364.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-19">Сборка Go 1.26.11, образ Alpine 3.23.</text>
+  <text x="611" y="330.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-18">Сервис scangrader</text>
+  <text x="611" y="364.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-19">Сборка на Go 1.26.11 для Alpine 3.23.</text>
   <text x="611" y="387.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-20">USER 10001:10001 · отдельный пользователь.</text>
   <text x="611" y="410.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-21">SG_ADDR=:8080  ·  SG_DATA_DIR=/data</text>
   <text x="596" y="481.536" fill="#17675F" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-22">HEALTHCHECK · каждые 3 с</text>
   <text x="596" y="506.536" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-23">GET /healthz проверяет БД через PingContext.</text>
-  <text x="596" y="530.536" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-24">200 при успехе, 503 при ошибке БД.</text>
+  <text x="596" y="530.536" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-24">При успехе ответ 200, а при ошибке БД 503.</text>
   <rect x="1175" y="276" width="201" height="169" rx="8" fill="#EEF0F8" stroke="#7C83A1" stroke-width="1.5" data-cell="d03-volume" />
   <text x="1190" y="299.325" fill="#4C6471" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-26">ИМЕНОВАННЫЙ ТОМ</text>
   <text x="1190" y="330.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Consolas, monospace" font-weight="700" data-cell="d03-item-27">app-data</text>
@@ -54,13 +54,13 @@
   <text x="1111" y="350.036" fill="#4C6471" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-35">app-data:/data</text>
   <text x="1104" y="384.344" fill="#4C6471" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-36">чтение / запись</text>
   <rect x="40" y="621" width="660" height="118" rx="7" fill="#F3F7F7" stroke="#C9D8D8" stroke-width="1.2" data-cell="d03-credentials" />
-  <text x="56" y="645.19" fill="#17675F" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-38">Доступ к демоданным</text>
+  <text x="56" y="645.19" fill="#17675F" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-38">Доступ к учебным данным</text>
   <text x="56" y="673.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-39">Первый запуск создаёт токены двух ролей в SQLite. Команда</text>
   <text x="56" y="695.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-40">scangrader token teacher или scangrader token student выдаёт токен.</text>
   <rect x="722" y="621" width="678" height="118" rx="7" fill="#FFFAED" stroke="#B18C42" stroke-width="1.2" data-cell="d03-vm" stroke-dasharray="7 5" />
-  <text x="738" y="645.19" fill="#886420" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-42">Учебная ВМ · проектный профиль S1</text>
+  <text x="738" y="645.19" fill="#886420" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-42">Учебная ВМ по профилю S1</text>
   <text x="738" y="673.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-43">Одна ВМ с 2 vCPU и 4 ГБ RAM. Запуск и обновление · NFR-005.</text>
-  <text x="738" y="695.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-44">Цель NFR-007 включает резервную копию вне ВМ и восстановление.</text>
+  <text x="738" y="695.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d03-item-44">Для NFR-007 копию хранят вне ВМ и проверяют восстановление.</text>
   <polyline points="40,762 1400,762" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d03-item-45" />
   <text x="40" y="791.536" fill="#19313D" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="700" data-cell="d03-item-46">Легенда</text>
   <rect x="137" y="781" width="24" height="13" rx="2" fill="none" stroke="#92ABA3" stroke-width="1.5" data-cell="d03-item-47" />

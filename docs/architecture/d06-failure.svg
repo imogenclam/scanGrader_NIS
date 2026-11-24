@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title description" data-page="D-06">
   <title id="title">D-06. Два параллельных утверждения</title>
-  <desc id="description">Оба запроса содержат допустимые оценки и токен одного преподавателя. В этом порядке исполнения транзакцию первой начинает A. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
+  <desc id="description">Оба клиента отправили допустимые оценки с токеном одного преподавателя. В этом примере сервер первым начал транзакцию запроса A. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
   <defs>
     <marker id="arrow-regular" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
       <path fill="#496778" d="M0,0 L10,4 L0,8 Z" />
@@ -22,7 +22,7 @@
   <rect x="40" y="56" width="88" height="41" rx="4" fill="#17675F" stroke="#17675F" stroke-width="1.5" data-cell="d06-id" />
   <text x="84" y="84.112" fill="#FFFFFF" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-4">D-06</text>
   <text x="150" y="89.302" fill="#19313D" text-anchor="start" font-size="37" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-5">Два параллельных утверждения</text>
-  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-6">Оба запроса содержат допустимые оценки и токен одного преподавателя. В этом порядке исполнения транзакцию первой начинает A.</text>
+  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-6">Оба клиента отправили допустимые оценки с токеном одного преподавателя. В этом примере сервер первым начал транзакцию запроса A.</text>
   <polyline points="40,151 1400,151" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d06-item-7" />
   <rect x="702" y="171" width="698" height="611" rx="10" fill="#FCFEFD" stroke="#A8BEB8" stroke-width="1.5" data-cell="d06-scope" />
   <text x="719" y="196.344" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-9">ЛОКАЛЬНЫЙ СЕРВИС И ЕГО БАЗА</text>
@@ -81,12 +81,12 @@
   <text x="667.5" y="729.209" fill="#994441" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-62">409 Conflict · работа уже утверждена</text>
   <rect x="40" y="809" width="653" height="113" rx="7" fill="#F3F7F7" stroke="#C9D8D8" stroke-width="1.2" data-cell="d06-locking" />
   <text x="56" y="833.19" fill="#17675F" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-64">Почему второй запрос читает результат A</text>
-  <text x="56" y="861.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-65">Пул допускает одно соединение. BEGIN IMMEDIATE сериализует запись.</text>
-  <text x="56" y="883.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-66">Проверка статуса и публикация происходят в одной транзакции.</text>
+  <text x="56" y="861.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-65">Сервис открывает одно соединение. Записи выполняются по очереди.</text>
+  <text x="56" y="883.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-66">Транзакция BEGIN IMMEDIATE охватывает проверку статуса и запись итога.</text>
   <rect x="714" y="809" width="686" height="113" rx="7" fill="#FBF0EC" stroke="#BA7A6E" stroke-width="1.2" data-cell="d06-result" />
   <text x="730" y="833.19" fill="#994441" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-68">Что остаётся в базе после 409</text>
-  <text x="730" y="861.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-69">Итоговые строки, approved_by и approved_at принадлежат запросу A.</text>
-  <text x="730" y="883.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-70">GET студента совпадает с успешным ответом A · NFR-003, NFR-006.</text>
+  <text x="730" y="861.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-69">Оценки и поля approved_by и approved_at записал запрос A.</text>
+  <text x="730" y="883.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-70">Ответ на GET студента совпадает с ответом A · NFR-003, NFR-006.</text>
   <polyline points="40,942 1400,942" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d06-item-71" />
   <text x="40" y="971.536" fill="#19313D" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-72">Легенда</text>
   <polyline points="137,967 168,967" stroke="#496778" fill="none" stroke-width="1.7" stroke-linejoin="round" data-cell="d06-item-73" marker-end="url(#arrow-regular)" />

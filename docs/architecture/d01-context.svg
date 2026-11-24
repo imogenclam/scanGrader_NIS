@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1440" height="860" viewBox="0 0 1440 860" role="img" aria-labelledby="title description" data-page="D-01">
   <title id="title">D-01. Контекст системы</title>
-  <desc id="description">Преподаватель утверждает баллы. Студент читает статус и результат своей работы. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
+  <desc id="description">Студент видит статус своей работы, а после утверждения узнаёт оценку преподавателя. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
   <defs>
     <marker id="arrow-regular" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
       <path fill="#496778" d="M0,0 L10,4 L0,8 Z" />
@@ -22,7 +22,7 @@
   <rect x="40" y="56" width="88" height="41" rx="4" fill="#17675F" stroke="#17675F" stroke-width="1.5" data-cell="d01-id" />
   <text x="84" y="84.112" fill="#FFFFFF" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-4">D-01</text>
   <text x="150" y="89.302" fill="#19313D" text-anchor="start" font-size="37" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-5">Контекст системы</text>
-  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-6">Преподаватель утверждает баллы. Студент читает статус и результат своей работы.</text>
+  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-6">Студент видит статус своей работы, а после утверждения узнаёт оценку преподавателя.</text>
   <polyline points="40,151 1400,151" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d01-item-7" />
   <rect x="523" y="176" width="411" height="466" rx="10" fill="#FCFEFD" stroke="#A8BEB8" stroke-width="1.5" data-cell="d01-system" />
   <text x="540" y="201.344" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-9">ГРАНИЦА ПРОЕКТА SCAN GRADER</text>
@@ -44,7 +44,7 @@
   <rect x="545" y="466" width="367" height="157" rx="8" fill="#FFFAED" stroke="#B18C42" stroke-width="1.5" data-cell="d01-mvp" stroke-dasharray="7 5" />
   <text x="560" y="489.325" fill="#886420" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-26">ЦЕЛЕВОЙ MVP</text>
   <text x="560" y="520.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-27">Сдача и проверка PDF</text>
-  <text x="560" y="554.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-28">Предмет, задание, эталон .tex.</text>
+  <text x="560" y="554.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-28">Задание в предмете с эталоном .tex.</text>
   <text x="560" y="577.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-29">Приём PDF и подготовка черновика.</text>
   <text x="560" y="600.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-30">Ручная оценка при сбое · NFR-002</text>
   <rect x="1110" y="467" width="290" height="157" rx="8" fill="#FFFAED" stroke="#B18C42" stroke-width="1.5" data-cell="d01-provider" stroke-dasharray="7 5" />
@@ -68,7 +68,7 @@
   <text x="1022" y="604.036" fill="#886420" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-49">HTTPS</text>
   <rect x="40" y="664" width="1360" height="76" rx="7" fill="#F7F2F9" stroke="#9C80A6" stroke-width="1.2" data-cell="d01-experiment" />
   <text x="56" y="688.19" fill="#725789" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-51">Изолированный эксперимент</text>
-  <text x="56" y="716.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-52">Тест читает два синтетических PDF и вызывает локальный HTTP-двойник оценщика. Go-приложение запускается отдельно.</text>
+  <text x="56" y="716.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-52">Тест распознаёт формулы из двух PDF и передаёт их локальному оценщику по HTTP. Сервис Go работает отдельно.</text>
   <polyline points="40,762 1400,762" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d01-item-53" />
   <text x="40" y="791.536" fill="#19313D" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-54">Легенда</text>
   <rect x="137" y="780" width="24" height="15" rx="3" fill="#F2F6F8" stroke="#7B95A3" stroke-width="1.5" data-cell="d01-item-55" />

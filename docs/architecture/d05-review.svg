@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1440" height="1104" viewBox="0 0 1440 1104" role="img" aria-labelledby="title description" data-page="D-05">
   <title id="title">D-05. Утверждение оценки</title>
-  <desc id="description">Демосдача № 1 ожидает проверки. За задачу можно получить 1 балл, в исходном черновике стоит 0,5. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
+  <desc id="description">В учебной работе № 1 одна задача. Преподавателю предстоит проверить черновую оценку 0,5 балла из 1. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
   <defs>
     <marker id="arrow-regular" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
       <path fill="#496778" d="M0,0 L10,4 L0,8 Z" />
@@ -22,7 +22,7 @@
   <rect x="40" y="56" width="88" height="41" rx="4" fill="#17675F" stroke="#17675F" stroke-width="1.5" data-cell="d05-id" />
   <text x="84" y="84.112" fill="#FFFFFF" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d05-item-4">D-05</text>
   <text x="150" y="89.302" fill="#19313D" text-anchor="start" font-size="37" font-family="Arial, sans-serif" font-weight="700" data-cell="d05-item-5">Утверждение оценки</text>
-  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d05-item-6">Демосдача № 1 ожидает проверки. За задачу можно получить 1 балл, в исходном черновике стоит 0,5.</text>
+  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d05-item-6">В учебной работе № 1 одна задача. Преподавателю предстоит проверить черновую оценку 0,5 балла из 1.</text>
   <polyline points="40,151 1400,151" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d05-item-7" />
   <rect x="702" y="171" width="698" height="715" rx="10" fill="#FCFEFD" stroke="#A8BEB8" stroke-width="1.5" data-cell="d05-scope" />
   <text x="719" y="196.344" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d05-item-9">ЛОКАЛЬНЫЙ СЕРВИС И ЕГО БАЗА</text>
@@ -44,7 +44,7 @@
   <rect x="1119" y="210" width="270" height="662" rx="0" fill="none" stroke="none" stroke-width="1.5" data-cell="d05-sqlite" aria-hidden="true" />
   <rect x="1119" y="210" width="270" height="63" rx="7" fill="#EEF0F8" stroke="#7C83A1" stroke-width="1.5" data-cell="d05-item-26" />
   <text x="1254" y="235.42" fill="#19313D" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" font-weight="700" data-cell="d05-item-27">SQLite</text>
-  <text x="1254" y="259.19" fill="#4C6471" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d05-item-28">одна демосдача</text>
+  <text x="1254" y="259.19" fill="#4C6471" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d05-item-28">одна учебная работа</text>
   <polyline points="1254,273 1254,872" stroke="#91A3AD" fill="none" stroke-width="1.1" stroke-linejoin="round" data-cell="d05-item-29" stroke-dasharray="6 5" />
   <polyline points="163,309 860,309" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d05-item-30" marker-end="url(#arrow-regular)" />
   <rect x="326.26367" y="284" width="370.47266" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d05-item-31" />
@@ -53,8 +53,8 @@
   <rect x="905.39844" y="321" width="303.20312" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d05-item-34" />
   <text x="1057" y="336.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d05-item-35">Роль по токену, SELECT по teacher_id</text>
   <polyline points="1254,383 860,383" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d05-item-36" stroke-dasharray="7 5" marker-end="url(#arrow-regular)" />
-  <rect x="942.25" y="358" width="229.5" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d05-item-37" />
-  <text x="1057" y="373.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d05-item-38">Задачи, максимум, черновик</text>
+  <rect x="918.625" y="358" width="276.75" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d05-item-37" />
+  <text x="1057" y="373.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d05-item-38">Задачи с максимумами и черновик</text>
   <polyline points="860,420 163,420" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d05-item-39" stroke-dasharray="7 5" marker-end="url(#arrow-regular)" />
   <rect x="362.75781" y="395" width="297.48438" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d05-item-40" />
   <text x="511.5" y="410.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d05-item-41">200 · pending_review, черновик 0,5 / 1</text>
@@ -93,7 +93,7 @@
   <text x="667.5" y="859.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d05-item-74">200 · итог 0,7 и комментарий</text>
   <rect x="40" y="909" width="1360" height="76" rx="7" fill="#F3F7F7" stroke="#C9D8D8" stroke-width="1.2" data-cell="d05-publication" />
   <text x="56" y="933.19" fill="#17675F" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d05-item-76">Что меняется для студента · NFR-003, NFR-006</text>
-  <text x="56" y="961.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d05-item-77">До утверждения доступны id и status. После COMMIT студент получает итоговые строки, сумму, автора и время. Черновик сохраняется у преподавателя.</text>
+  <text x="56" y="961.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d05-item-77">До утверждения студент видит id и status. После COMMIT ему видны баллы с суммой и сведения о том, кто и когда их утвердил. Черновик видит преподаватель.</text>
   <polyline points="40,1006 1400,1006" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d05-item-78" />
   <text x="40" y="1035.536" fill="#19313D" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="700" data-cell="d05-item-79">Легенда</text>
   <polyline points="137,1031 168,1031" stroke="#496778" fill="none" stroke-width="1.7" stroke-linejoin="round" data-cell="d05-item-80" marker-end="url(#arrow-regular)" />

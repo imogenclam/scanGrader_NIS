@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1440" height="932" viewBox="0 0 1440 932" role="img" aria-labelledby="title description" data-page="D-04">
   <title id="title">D-04. Модель данных SQLite</title>
-  <desc id="description">Миграция 001_init.sql создаёт четыре таблицы. Черновики хранятся в submission_tasks, итоги в final_grades. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
+  <desc id="description">Миграция 001_init.sql создаёт четыре таблицы. Черновики хранятся в submission_tasks, а итоги записываются в final_grades. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
   <defs>
     <marker id="arrow-regular" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
       <path fill="#496778" d="M0,0 L10,4 L0,8 Z" />
@@ -22,7 +22,7 @@
   <rect x="40" y="56" width="88" height="41" rx="4" fill="#17675F" stroke="#17675F" stroke-width="1.5" data-cell="d04-id" />
   <text x="84" y="84.112" fill="#FFFFFF" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-4">D-04</text>
   <text x="150" y="89.302" fill="#19313D" text-anchor="start" font-size="37" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-5">Модель данных SQLite</text>
-  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-6">Миграция 001_init.sql создаёт четыре таблицы. Черновики хранятся в submission_tasks, итоги в final_grades.</text>
+  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-6">Миграция 001_init.sql создаёт четыре таблицы. Черновики хранятся в submission_tasks, а итоги записываются в final_grades.</text>
   <polyline points="40,151 1400,151" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d04-item-7" />
   <rect x="40" y="175" width="1360" height="638" rx="10" fill="#FDFDFE" stroke="#ADB3C5" stroke-width="1.5" data-cell="d04-schema" />
   <text x="57" y="200.344" fill="#4C6471" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-9">SQLITE  /  PRAGMA USER_VERSION = 1  /  FOREIGN_KEYS = ON</text>
@@ -92,13 +92,13 @@
   <rect x="60" y="483" width="928" height="299" rx="7" fill="#F3F7F7" stroke="#C9D8D8" stroke-width="1.5" data-cell="d04-constraints" />
   <text x="78" y="513.92" fill="#19313D" text-anchor="start" font-size="20" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-74">Ограничения и производные поля</text>
   <text x="78" y="551.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-75">Роли и владелец · NFR-003</text>
-  <text x="78" y="574.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-76">role принимает teacher или student. При заполнении approved_by равен teacher_id.</text>
+  <text x="78" y="574.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-76">role принимает teacher или student. Если approved_by задан, он равен teacher_id.</text>
   <text x="78" y="609.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-77">Момент публикации</text>
   <text x="78" y="632.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-78">approved_by и approved_at заполняются вместе. По approved_at код определяет статус.</text>
   <text x="78" y="667.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-79">Границы балла · NFR-006</text>
   <text x="78" y="690.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-80">SQL требует 0 ≤ draft_score ≤ max_score и score ≥ 0. Код также проверяет верхнюю границу итога.</text>
   <text x="78" y="725.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-81">Сохранность результата · NFR-007</text>
-  <text x="78" y="748.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-82">Пара (submission_id, number) уникальна в каждой таблице строк. Сумма получается при чтении.</text>
+  <text x="78" y="748.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d04-item-82">В каждой таблице строк пара (submission_id, number) уникальна. При чтении сервис считает сумму.</text>
   <polyline points="40,834 1400,834" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d04-item-83" />
   <text x="40" y="863.536" fill="#19313D" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="700" data-cell="d04-item-84">Легенда</text>
   <polyline points="137,859 168,859" stroke="#496778" fill="none" stroke-width="1.7" stroke-linejoin="round" data-cell="d04-item-85" marker-end="url(#arrow-regular)" />

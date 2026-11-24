@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1440" height="1010" viewBox="0 0 1440 1010" role="img" aria-labelledby="title description" data-page="D-02">
   <title id="title">D-02. Компоненты и границы доступа</title>
-  <desc id="description">HTTP-обработчик обращается к хранилищу. Хранилище вызывает правила оценивания и читает локальную SQLite. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
+  <desc id="description">HTTP-обработчик передаёт запрос хранилищу, которое проверяет баллы через grading и обращается к SQLite. Scan Grader. КТ-2. Версия 1 от 24.11.2026.</desc>
   <defs>
     <marker id="arrow-regular" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
       <path fill="#496778" d="M0,0 L10,4 L0,8 Z" />
@@ -22,7 +22,7 @@
   <rect x="40" y="56" width="88" height="41" rx="4" fill="#17675F" stroke="#17675F" stroke-width="1.5" data-cell="d02-id" />
   <text x="84" y="84.112" fill="#FFFFFF" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-4">D-02</text>
   <text x="150" y="89.302" fill="#19313D" text-anchor="start" font-size="37" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-5">Компоненты и границы доступа</text>
-  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-6">HTTP-обработчик обращается к хранилищу. Хранилище вызывает правила оценивания и читает локальную SQLite.</text>
+  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-6">HTTP-обработчик передаёт запрос хранилищу, которое проверяет баллы через grading и обращается к SQLite.</text>
   <polyline points="40,151 1400,151" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d02-item-7" />
   <rect x="341" y="176" width="1059" height="322" rx="10" fill="#FCFEFD" stroke="#A8BEB8" stroke-width="1.5" data-cell="d02-process" />
   <text x="358" y="201.344" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-9">ДОВЕРЕННАЯ ЧАСТЬ  /  ОДИН ПРОЦЕСС GO</text>
@@ -30,19 +30,19 @@
   <text x="55" y="286.325" fill="#4C6471" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-11">ВНЕ СЕРВИСА</text>
   <text x="55" y="316.766" fill="#19313D" text-anchor="start" font-size="21" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-12">HTTP-клиент</text>
   <text x="55" y="351.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-13">Bearer-токен</text>
-  <text x="55" y="374.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-14">для роли демо.</text>
+  <text x="55" y="374.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-14">учебной роли.</text>
   <rect x="361" y="249" width="238" height="166" rx="8" fill="#E9F4EF" stroke="#4D8A7E" stroke-width="1.5" data-cell="d02-api" />
   <text x="376" y="272.325" fill="#17675F" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-16">ПАКЕТ</text>
   <text x="376" y="303.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Consolas, monospace" font-weight="700" data-cell="d02-item-17">src/api</text>
   <text x="376" y="337.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-18">Маршруты и JSON.</text>
-  <text x="376" y="360.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-19">Проверка роли, лимит</text>
-  <text x="376" y="383.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-20">тела запроса 1 МиБ.</text>
+  <text x="376" y="360.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-19">Проверяет роль. Тело</text>
+  <text x="376" y="383.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-20">запроса до 1 МиБ.</text>
   <rect x="756" y="249" width="265" height="189" rx="8" fill="#E9F4EF" stroke="#4D8A7E" stroke-width="1.5" data-cell="d02-storage" />
   <text x="771" y="272.325" fill="#17675F" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-22">ПАКЕТ</text>
   <text x="771" y="303.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Consolas, monospace" font-weight="700" data-cell="d02-item-23">src/storage</text>
   <text x="771" y="337.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-24">Ищет роль по токену.</text>
   <text x="771" y="360.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-25">Сверяет владельца сдачи.</text>
-  <text x="771" y="383.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-26">Читает и утверждает итог.</text>
+  <text x="771" y="383.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-26">Читает и сохраняет итог.</text>
   <text x="771" y="406.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-27">NFR-001 · NFR-003</text>
   <rect x="1161" y="249" width="218" height="166" rx="8" fill="#E9F4EF" stroke="#4D8A7E" stroke-width="1.5" data-cell="d02-grading" />
   <text x="1176" y="272.325" fill="#17675F" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-29">ПАКЕТ</text>
@@ -66,7 +66,7 @@
   <text x="71" y="669.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-47">Читает тестовые сканы.</text>
   <rect x="422" y="581" width="228" height="126" rx="8" fill="#F7F2F9" stroke="#9C80A6" stroke-width="1.5" data-cell="d02-fixture" />
   <text x="437" y="604.325" fill="#725789" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-49">ТЕСТОВЫЙ ОЦЕНЩИК</text>
-  <text x="437" y="634.42" fill="#19313D" text-anchor="start" font-size="20" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-50">HTTP-двойник</text>
+  <text x="437" y="634.42" fill="#19313D" text-anchor="start" font-size="20" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-50">Локальный API</text>
   <text x="437" y="669.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-51">Два заданных ответа.</text>
   <polyline points="291,647 422,647" stroke="#725789" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d02-item-52" marker-end="url(#arrow-exp)" />
   <text x="356" y="636.036" fill="#725789" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-53">HTTP / JSON</text>
@@ -76,7 +76,7 @@
   <text x="770" y="604.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-57">Файл SQLite</text>
   <text x="770" y="638.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-58">scangrader.db · встроенный драйвер Go.</text>
   <text x="770" y="661.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-59">Пул допускает одно соединение.</text>
-  <text x="770" y="684.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-60">Модель данных приведена на D-04.</text>
+  <text x="770" y="684.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-60">Схема данных на D-04.</text>
   <polyline points="888,438 888,550" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d02-item-61" marker-end="url(#arrow-regular)" />
   <text x="901" y="528.036" fill="#4C6471" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-62">database/sql · SQL</text>
   <rect x="40" y="752" width="1360" height="137" rx="10" fill="#FFFEFA" stroke="#B18C42" stroke-width="1.5" data-cell="d02-planned-integration" stroke-dasharray="7 5" />
