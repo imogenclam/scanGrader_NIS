@@ -1,0 +1,254 @@
+openapi: 3.0.3
+info:
+  title: Scan Grader
+  version: 0.2.0
+  contact:
+    name: Артур Галимов
+  description: 'REST API Scan Grader от 24.11.2026. Пути заданы от корня сервера без префикса версии. Каждый ответ содержит заголовок Cache-Control: no-store.'
+servers:
+  - url: /
+security:
+  - bearer: []
+paths:
+  /healthz:
+    get:
+      operationId: checkHealth
+      summary: Проверить доступность SQLite
+      security: []
+      responses:
+        '200':
+          description: Соединение с базой работает.
+          headers: {Cache-Control: {$ref: '#/components/headers/NoStore'}}
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                required: [status]
+                properties:
+                  status: {type: string, enum: [ok]}
+              example: {status: ok}
+        '503':
+          description: Сервер не смог проверить соединение с SQLite.
+          headers: {Cache-Control: {$ref: '#/components/headers/NoStore'}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+              example: {error: база данных недоступна}
+  /api/submissions/{id}:
+    parameters:
+      - $ref: '#/components/parameters/SubmissionId'
+    get:
+      operationId: getSubmission
+      summary: Получить сдачу в представлении текущего пользователя
+      description: Преподаватель этой работы видит задачи и черновик при обоих статусах. Студент видит только свою работу и получает баллы после утверждения.
+      responses:
+        '200':
+          description: Поля ответа зависят от роли и статуса сдачи.
+          headers: {Cache-Control: {$ref: '#/components/headers/NoStore'}}
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/TeacherPending'
+                  - $ref: '#/components/schemas/StudentPending'
+                  - $ref: '#/components/schemas/TeacherApproved'
+                  - $ref: '#/components/schemas/Published'
+              examples:
+                teacherPending:
+                  value:
+                    id: 1
+                    status: pending_review
+                    tasks: [{number: 1, max: 1}]
+                    draft: [{number: 1, score: 0.5, comment: Проверьте вычисление.}]
+                studentPending:
+                  value: {id: 1, status: pending_review}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/submissions/{id}/approve:
+    parameters:
+      - $ref: '#/components/parameters/SubmissionId'
+    post:
+      operationId: approveSubmission
+      summary: Утвердить баллы и открыть результат студенту
+      description: Утвердить работу может только её преподаватель. В одной транзакции сервер сохраняет баллы с автором и временем утверждения. Из двух одновременных корректных запросов только один получает 200.
+      requestBody:
+        required: true
+        description: Передайте один объект JSON размером не более 1 048 576 байт. Порядок строк произволен.
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [grades]
+              properties:
+                grades: {$ref: '#/components/schemas/Grades'}
+            example:
+              grades: [{number: 1, score: 0.7, comment: Арифметическая ошибка}]
+      responses:
+        '200':
+          description: Студент видит тот же опубликованный результат.
+          headers: {Cache-Control: {$ref: '#/components/headers/NoStore'}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Published'}
+              example:
+                id: 1
+                status: approved
+                grades: [{number: 1, score: 0.7, comment: Арифметическая ошибка}]
+                total: 0.7
+                approved_by: teacher-demo
+                approved_at: '2026-11-24T09:12:00Z'
+        '400':
+          description: Сервер не смог прочитать JSON или обнаружил ошибку формата либо лишнее поле. При проверке оценок причиной отказа служит пропущенная задача или ошибка в номере, балле либо комментарии.
+          headers: {Cache-Control: {$ref: '#/components/headers/NoStore'}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+              example: {error: 'проверьте оценку: для задачи 1 укажите балл от 0 до 1'}
+        '401': {$ref: '#/components/responses/Unauthorized'}
+        '403':
+          description: Сервер проверяет роль и отклоняет запрос студента до чтения работы и тела запроса.
+          headers: {Cache-Control: {$ref: '#/components/headers/NoStore'}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+              example: {error: утвердить работу может только преподаватель}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409':
+          description: При повторе с допустимыми оценками утверждённая работа сохраняет прежний результат. Если в оценках ошибка, сервер возвращает 400.
+          headers: {Cache-Control: {$ref: '#/components/headers/NoStore'}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+              example: {error: работа уже утверждена}
+        '413':
+          description: Тело превышает 1 МиБ.
+          headers: {Cache-Control: {$ref: '#/components/headers/NoStore'}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+              example: {error: размер запроса превышает 1 МиБ}
+        '415':
+          description: Отсутствует Content-Type или значение отличается от application/json. Параметр charset допустим.
+          headers: {Cache-Control: {$ref: '#/components/headers/NoStore'}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Error'}
+              example: {error: требуется Content-Type application/json}
+        '500': {$ref: '#/components/responses/InternalError'}
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+      description: По токену в SQLite сервер определяет пользователя и роль (teacher или student). Заголовок X-Role сервер игнорирует.
+  parameters:
+    SubmissionId:
+      name: id
+      in: path
+      required: true
+      description: Положительный десятичный идентификатор сдачи.
+      schema: {$ref: '#/components/schemas/Id'}
+      example: 1
+  headers:
+    NoStore:
+      required: true
+      schema: {type: string, enum: [no-store]}
+  responses:
+    Unauthorized:
+      description: Сервер не получил токен по схеме Bearer или не нашёл его в базе.
+      headers:
+        Cache-Control: {$ref: '#/components/headers/NoStore'}
+        WWW-Authenticate:
+          required: true
+          schema: {type: string, enum: [Bearer]}
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+          example: {error: нужен действительный Bearer-токен}
+    NotFound:
+      description: Идентификатор неверен или такой работы нет. Тот же ответ сервер возвращает при запросе чужой работы.
+      headers: {Cache-Control: {$ref: '#/components/headers/NoStore'}}
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+          example: {error: сдача не найдена}
+    InternalError:
+      description: Внутренняя ошибка при обращении к хранилищу.
+      headers: {Cache-Control: {$ref: '#/components/headers/NoStore'}}
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Error'}
+          example: {error: внутренняя ошибка сервера}
+  schemas:
+    Error:
+      type: object
+      additionalProperties: false
+      required: [error]
+      properties:
+        error: {type: string, minLength: 1}
+    Id: {type: integer, format: int64, minimum: 1}
+    Tasks:
+      type: array
+      minItems: 1
+      items:
+        type: object
+        additionalProperties: false
+        required: [number, max]
+        properties:
+          number: {type: integer, minimum: 1}
+          max: {type: number, format: double, minimum: 0, exclusiveMinimum: true}
+    Grades:
+      type: array
+      minItems: 1
+      description: Для каждой задачи нужна одна строка с её номером. Сервер возвращает строки по возрастанию номера.
+      items:
+        type: object
+        additionalProperties: false
+        required: [number, score, comment]
+        properties:
+          number: {type: integer, minimum: 1}
+          score: {type: number, format: double, minimum: 0, description: 'Допустимы целые и дробные баллы от нуля до max задачи включительно.'}
+          comment: {type: string, minLength: 1, description: 'При утверждении сервер удаляет пробельные символы по краям комментария. В нём должно остаться от 1 до 1000 символов Unicode.'}
+    StudentPending:
+      type: object
+      additionalProperties: false
+      required: [id, status]
+      properties:
+        id: {$ref: '#/components/schemas/Id'}
+        status: {type: string, enum: [pending_review]}
+    TeacherPending:
+      type: object
+      additionalProperties: false
+      required: [id, status, tasks, draft]
+      properties:
+        id: {$ref: '#/components/schemas/Id'}
+        status: {type: string, enum: [pending_review]}
+        tasks: {$ref: '#/components/schemas/Tasks'}
+        draft: {$ref: '#/components/schemas/Grades'}
+    Published:
+      type: object
+      additionalProperties: false
+      required: [id, status, grades, total, approved_by, approved_at]
+      properties:
+        id: {$ref: '#/components/schemas/Id'}
+        status: {type: string, enum: [approved]}
+        grades: {$ref: '#/components/schemas/Grades'}
+        total: {type: number, format: double, minimum: 0, description: Сумма утверждённых баллов.}
+        approved_by: {type: string, minLength: 1, description: Идентификатор преподавателя.}
+        approved_at: {type: string, format: date-time, description: Время утверждения в UTC.}
+    TeacherApproved:
+      type: object
+      additionalProperties: false
+      required: [id, status, tasks, draft, grades, total, approved_by, approved_at]
+      properties:
+        id: {$ref: '#/components/schemas/Id'}
+        status: {type: string, enum: [approved]}
+        tasks: {$ref: '#/components/schemas/Tasks'}
+        draft: {$ref: '#/components/schemas/Grades'}
+        grades: {$ref: '#/components/schemas/Grades'}
+        total: {type: number, format: double, minimum: 0}
+        approved_by: {type: string, minLength: 1}
+        approved_at: {type: string, format: date-time}

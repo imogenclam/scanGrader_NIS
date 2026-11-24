@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1440" height="1010" viewBox="0 0 1440 1010" role="img" aria-labelledby="title description" data-page="D-02">
+  <title id="title">D-02. Компоненты и границы доступа</title>
+  <desc id="description">HTTP-обработчик передаёт запрос хранилищу, которое проверяет баллы через grading и обращается к SQLite. Scan Grader. КТ-2. Редакция cp2-r2 от 24.11.2026.</desc>
+  <defs>
+    <marker id="arrow-regular" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#496778" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-plan" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#886420" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-exp" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#725789" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-error" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#994441" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1440" height="1010" fill="white" />
+  <text x="40" y="34.844" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-1">SCAN GRADER    /    КТ-2    /    АРХИТЕКТУРА</text>
+  <text x="1400" y="35.19" fill="#4C6471" text-anchor="end" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-2">cp2-r2   ·   24.11.2026</text>
+  <rect x="40" y="56" width="88" height="41" rx="4" fill="#17675F" stroke="#17675F" stroke-width="1.5" data-cell="d02-id" />
+  <text x="84" y="84.112" fill="#FFFFFF" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-4">D-02</text>
+  <text x="150" y="89.302" fill="#19313D" text-anchor="start" font-size="37" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-5">Компоненты и границы доступа</text>
+  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-6">HTTP-обработчик передаёт запрос хранилищу, которое проверяет баллы через grading и обращается к SQLite.</text>
+  <polyline points="40,151 1400,151" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d02-item-7" />
+  <rect x="341" y="176" width="1059" height="322" rx="10" fill="#FCFEFD" stroke="#A8BEB8" stroke-width="1.5" data-cell="d02-process" />
+  <text x="358" y="201.344" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-9">ДОВЕРЕННАЯ ЧАСТЬ  /  ОДИН ПРОЦЕСС GO</text>
+  <rect x="40" y="263" width="192" height="139" rx="8" fill="#F2F6F8" stroke="#7B95A3" stroke-width="1.5" data-cell="d02-client" />
+  <text x="55" y="286.325" fill="#4C6471" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-11">ВНЕ СЕРВИСА</text>
+  <text x="55" y="316.766" fill="#19313D" text-anchor="start" font-size="21" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-12">HTTP-клиент</text>
+  <text x="55" y="351.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-13">Bearer-токен</text>
+  <text x="55" y="374.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-14">учебной роли.</text>
+  <rect x="361" y="249" width="238" height="166" rx="8" fill="#E9F4EF" stroke="#4D8A7E" stroke-width="1.5" data-cell="d02-api" />
+  <text x="376" y="272.325" fill="#17675F" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-16">ПАКЕТ</text>
+  <text x="376" y="303.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Consolas, monospace" font-weight="700" data-cell="d02-item-17">src/api</text>
+  <text x="376" y="337.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-18">Маршруты и JSON.</text>
+  <text x="376" y="360.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-19">Проверяет роль. Тело</text>
+  <text x="376" y="383.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-20">запроса до 1 МиБ.</text>
+  <rect x="756" y="249" width="265" height="189" rx="8" fill="#E9F4EF" stroke="#4D8A7E" stroke-width="1.5" data-cell="d02-storage" />
+  <text x="771" y="272.325" fill="#17675F" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-22">ПАКЕТ</text>
+  <text x="771" y="303.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Consolas, monospace" font-weight="700" data-cell="d02-item-23">src/storage</text>
+  <text x="771" y="337.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-24">Ищет роль по токену.</text>
+  <text x="771" y="360.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-25">Сверяет владельца сдачи.</text>
+  <text x="771" y="383.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-26">Читает и сохраняет итог.</text>
+  <text x="771" y="406.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-27">NFR-001 · NFR-003</text>
+  <rect x="1161" y="249" width="218" height="166" rx="8" fill="#E9F4EF" stroke="#4D8A7E" stroke-width="1.5" data-cell="d02-grading" />
+  <text x="1176" y="272.325" fill="#17675F" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-29">ПАКЕТ</text>
+  <text x="1176" y="303.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Consolas, monospace" font-weight="700" data-cell="d02-item-30">src/grading</text>
+  <text x="1176" y="337.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-31">Проверяет баллы.</text>
+  <text x="1176" y="360.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-32">Скрывает черновик.</text>
+  <text x="1176" y="383.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-33">Правила · NFR-006</text>
+  <polyline points="232,328 361,328" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d02-item-34" marker-end="url(#arrow-regular)" />
+  <text x="284.5" y="316.036" fill="#4C6471" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-35">HTTP / JSON</text>
+  <polyline points="599,328 756,328" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d02-item-36" marker-end="url(#arrow-regular)" />
+  <text x="677.5" y="315.036" fill="#4C6471" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-37">Go · чтение</text>
+  <text x="677.5" y="349.036" fill="#4C6471" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-38">и утверждение</text>
+  <polyline points="1021,328 1161,328" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d02-item-39" marker-end="url(#arrow-regular)" />
+  <text x="1090.5" y="317.036" fill="#4C6471" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-40">Validate</text>
+  <text x="1090.5" y="349.036" fill="#4C6471" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-41">Published</text>
+  <rect x="40" y="536" width="625" height="192" rx="10" fill="#FDFBFE" stroke="#9C80A6" stroke-width="1.5" data-cell="d02-experiment" stroke-dasharray="7 5" />
+  <text x="57" y="561.344" fill="#725789" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-43">ИЗОЛИРОВАННЫЙ ОПЫТ  /  ОТДЕЛЬНЫЙ ПРОЦЕСС</text>
+  <rect x="56" y="581" width="235" height="126" rx="8" fill="#F7F2F9" stroke="#9C80A6" stroke-width="1.5" data-cell="d02-ocr" />
+  <text x="71" y="604.325" fill="#725789" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-45">PDF → PNG → ТЕКСТ</text>
+  <text x="71" y="634.074" fill="#19313D" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-46">Poppler / Tesseract</text>
+  <text x="71" y="669.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-47">Читает тестовые сканы.</text>
+  <rect x="422" y="581" width="228" height="126" rx="8" fill="#F7F2F9" stroke="#9C80A6" stroke-width="1.5" data-cell="d02-fixture" />
+  <text x="437" y="604.325" fill="#725789" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-49">ТЕСТОВЫЙ ОЦЕНЩИК</text>
+  <text x="437" y="634.42" fill="#19313D" text-anchor="start" font-size="20" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-50">Локальный API</text>
+  <text x="437" y="669.036" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-51">Два заданных ответа.</text>
+  <polyline points="291,647 422,647" stroke="#725789" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d02-item-52" marker-end="url(#arrow-exp)" />
+  <text x="356" y="636.036" fill="#725789" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-53">HTTP / JSON</text>
+  <text x="356.5" y="668.036" fill="#725789" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-54">loopback</text>
+  <rect x="755" y="550" width="417" height="158" rx="8" fill="#EEF0F8" stroke="#7C83A1" stroke-width="1.5" data-cell="d02-db" />
+  <text x="770" y="573.325" fill="#4C6471" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-56">ПОСТОЯННОЕ ХРАНИЛИЩЕ</text>
+  <text x="770" y="604.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-57">Файл SQLite</text>
+  <text x="770" y="638.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-58">scangrader.db · встроенный драйвер Go.</text>
+  <text x="770" y="661.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-59">Пул допускает одно соединение.</text>
+  <text x="770" y="684.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-60">Схема данных на D-04.</text>
+  <polyline points="888,438 888,550" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d02-item-61" marker-end="url(#arrow-regular)" />
+  <text x="901" y="528.036" fill="#4C6471" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-62">database/sql · SQL</text>
+  <rect x="40" y="752" width="1360" height="137" rx="10" fill="#FFFEFA" stroke="#B18C42" stroke-width="1.5" data-cell="d02-planned-integration" stroke-dasharray="7 5" />
+  <text x="57" y="777.344" fill="#886420" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-64">ПОЛНЫЙ MVP  /  ИНТЕГРАЦИЯ РАСПОЗНАВАНИЯ И ОЦЕНКИ</text>
+  <text x="58" y="811.228" fill="#886420" text-anchor="start" font-size="18" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-65">Подготовка PDF и ручная проверка</text>
+  <text x="58" y="841.536" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-66">NFR-010 · сжатие, NFR-002 · сбой</text>
+  <text x="486" y="811.228" fill="#886420" text-anchor="start" font-size="18" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-67">Вызов модели и учёт попытки</text>
+  <text x="486" y="841.536" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-68">NFR-008 · качество, NFR-009 · лимиты</text>
+  <text x="486" y="865.536" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-69">NFR-011 · время ответа</text>
+  <text x="919" y="811.228" fill="#886420" text-anchor="start" font-size="18" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-70">Журнал и происхождение черновика</text>
+  <text x="919" y="841.536" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-71">NFR-004 · этап, статус и длительность</text>
+  <text x="919" y="865.536" fill="#354D59" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-72">NFR-012 · версии компонентов и эталона</text>
+  <polyline points="40,912 1400,912" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d02-item-73" />
+  <text x="40" y="941.536" fill="#19313D" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-74">Легенда</text>
+  <rect x="137" y="930" width="24" height="15" rx="3" fill="#E9F4EF" stroke="#4D8A7E" stroke-width="1.5" data-cell="d02-item-75" />
+  <text x="176" y="941.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-76">пакет Go</text>
+  <rect x="273.99609" y="930" width="24" height="15" rx="3" fill="#EEF0F8" stroke="#7C83A1" stroke-width="1.5" data-cell="d02-item-77" />
+  <text x="312.99609" y="941.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-78">файл БД</text>
+  <rect x="410.99609" y="930" width="24" height="15" rx="3" fill="#F7F2F9" stroke="#9C80A6" stroke-width="1.5" data-cell="d02-item-79" />
+  <text x="449.99609" y="941.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-80">изолированный опыт</text>
+  <rect x="636.23438" y="930" width="24" height="15" rx="3" fill="#FFFAED" stroke="#B18C42" stroke-width="1.5" data-cell="d02-item-81" stroke-dasharray="7 5" />
+  <text x="675.23438" y="941.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-82">план MVP</text>
+  <polyline points="781.48438,937 812.48438,937" stroke="#496778" fill="none" stroke-width="1.7" stroke-linejoin="round" data-cell="d02-item-83" marker-end="url(#arrow-regular)" />
+  <text x="820.48438" y="941.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-84">вызов по указанному протоколу</text>
+  <text x="40" y="983.69" fill="#17675F" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-85">Связи</text>
+  <a href="../adr/ADR-001-system.md" xlink:href="../adr/ADR-001-system.md">
+    <text x="137" y="983.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-86">ADR-001</text>
+  </a>
+  <a href="../adr/ADR-002-storage.md" xlink:href="../adr/ADR-002-storage.md">
+    <text x="221.5" y="983.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-87">ADR-002</text>
+  </a>
+  <a href="../adr/ADR-003-interaction.md" xlink:href="../adr/ADR-003-interaction.md">
+    <text x="306" y="983.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d02-item-88">ADR-003</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="406.5" y="983.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-89">NFR-001</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="485.25" y="983.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-90">NFR-002</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="564" y="983.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-91">NFR-003</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="642.75" y="983.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-92">NFR-004</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="721.5" y="983.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-93">NFR-006</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="800.25" y="983.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-94">NFR-008</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="879" y="983.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-95">NFR-009</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="957.75" y="983.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-96">NFR-010</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="1036.5" y="983.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-97">NFR-011</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="1115.23047" y="983.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d02-item-98">NFR-012</text>
+  </a>
+</svg>

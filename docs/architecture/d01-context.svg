@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1440" height="860" viewBox="0 0 1440 860" role="img" aria-labelledby="title description" data-page="D-01">
+  <title id="title">D-01. Контекст системы</title>
+  <desc id="description">Студент видит статус своей работы, а после утверждения узнаёт оценку преподавателя. Scan Grader. КТ-2. Редакция cp2-r2 от 24.11.2026.</desc>
+  <defs>
+    <marker id="arrow-regular" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#496778" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-plan" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#886420" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-exp" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#725789" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-error" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#994441" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1440" height="860" fill="white" />
+  <text x="40" y="34.844" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-1">SCAN GRADER    /    КТ-2    /    АРХИТЕКТУРА</text>
+  <text x="1400" y="35.19" fill="#4C6471" text-anchor="end" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-2">cp2-r2   ·   24.11.2026</text>
+  <rect x="40" y="56" width="88" height="41" rx="4" fill="#17675F" stroke="#17675F" stroke-width="1.5" data-cell="d01-id" />
+  <text x="84" y="84.112" fill="#FFFFFF" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-4">D-01</text>
+  <text x="150" y="89.302" fill="#19313D" text-anchor="start" font-size="37" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-5">Контекст системы</text>
+  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-6">Студент видит статус своей работы, а после утверждения узнаёт оценку преподавателя.</text>
+  <polyline points="40,151 1400,151" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d01-item-7" />
+  <rect x="523" y="176" width="411" height="466" rx="10" fill="#FCFEFD" stroke="#A8BEB8" stroke-width="1.5" data-cell="d01-system" />
+  <text x="540" y="201.344" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-9">ГРАНИЦА ПРОЕКТА SCAN GRADER</text>
+  <rect x="40" y="223" width="276" height="117" rx="8" fill="#F2F6F8" stroke="#7B95A3" stroke-width="1.5" data-cell="d01-teacher" />
+  <text x="55" y="246.325" fill="#4C6471" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-11">РОЛЬ</text>
+  <text x="55" y="277.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-12">Преподаватель</text>
+  <text x="55" y="311.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-13">Сверяет и утверждает баллы.</text>
+  <rect x="40" y="351" width="276" height="117" rx="8" fill="#F2F6F8" stroke="#7B95A3" stroke-width="1.5" data-cell="d01-student" />
+  <text x="55" y="374.325" fill="#4C6471" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-15">РОЛЬ</text>
+  <text x="55" y="405.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-16">Студент</text>
+  <text x="55" y="439.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-17">Открывает свою сдачу.</text>
+  <rect x="545" y="222" width="367" height="212" rx="8" fill="#E9F4EF" stroke="#4D8A7E" stroke-width="1.5" data-cell="d01-review" />
+  <text x="560" y="245.325" fill="#17675F" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-19">КАРКАС КТ-2</text>
+  <text x="560" y="276.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-20">Scan Grader</text>
+  <text x="560" y="310.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-21">Открывает сдачу № 1 с черновиком.</text>
+  <text x="560" y="333.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-22">Публикует утверждённую оценку.</text>
+  <text x="560" y="356.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-23">Проверяет роль и владельца.</text>
+  <text x="560" y="379.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-24">Доступ к результату · NFR-003</text>
+  <rect x="545" y="466" width="367" height="157" rx="8" fill="#FFFAED" stroke="#B18C42" stroke-width="1.5" data-cell="d01-mvp" stroke-dasharray="7 5" />
+  <text x="560" y="489.325" fill="#886420" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-26">ЦЕЛЕВОЙ MVP</text>
+  <text x="560" y="520.458" fill="#19313D" text-anchor="start" font-size="23" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-27">Сдача и проверка PDF</text>
+  <text x="560" y="554.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-28">Задание в предмете с эталоном .tex.</text>
+  <text x="560" y="577.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-29">Приём PDF и подготовка черновика.</text>
+  <text x="560" y="600.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-30">Ручная оценка при сбое · NFR-002</text>
+  <rect x="1110" y="467" width="290" height="157" rx="8" fill="#FFFAED" stroke="#B18C42" stroke-width="1.5" data-cell="d01-provider" stroke-dasharray="7 5" />
+  <text x="1125" y="490.325" fill="#886420" text-anchor="start" font-size="12.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-32">ВНЕШНЯЯ СИСТЕМА · ПЛАН</text>
+  <text x="1125" y="521.112" fill="#19313D" text-anchor="start" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-33">Сервис оценки</text>
+  <text x="1125" y="555.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-34">Сверяет текст с эталоном.</text>
+  <text x="1125" y="578.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-35">Возвращает баллы по задачам.</text>
+  <text x="1125" y="601.382" fill="#354D59" text-anchor="start" font-size="17" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-36">Качество черновика · NFR-008</text>
+  <polyline points="316,284 545,284" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d01-item-37" marker-end="url(#arrow-regular)" />
+  <text x="420" y="273.036" fill="#4C6471" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-38">Чтение и утверждение</text>
+  <text x="420" y="305.036" fill="#4C6471" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-39">HTTP / JSON</text>
+  <polyline points="316,408 545,408" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d01-item-40" marker-end="url(#arrow-regular)" />
+  <text x="420" y="397.036" fill="#4C6471" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-41">Чтение статуса и итога</text>
+  <text x="420" y="428.036" fill="#4C6471" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-42">HTTP / JSON</text>
+  <polyline points="178,468 178,569 545,569" stroke="#886420" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d01-item-43" stroke-dasharray="7 5" marker-end="url(#arrow-plan)" />
+  <text x="365" y="557.036" fill="#886420" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-44">Загрузка PDF через интерфейс сдачи</text>
+  <polyline points="912,527 1110,527" stroke="#886420" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d01-item-45" stroke-dasharray="7 5" marker-end="url(#arrow-plan)" />
+  <text x="1022" y="516.036" fill="#886420" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-46">Текст и эталон</text>
+  <polyline points="1110,578 912,578" stroke="#886420" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d01-item-47" stroke-dasharray="7 5" marker-end="url(#arrow-plan)" />
+  <text x="1022" y="567.036" fill="#886420" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-48">Черновик · JSON</text>
+  <text x="1022" y="604.036" fill="#886420" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-49">HTTPS</text>
+  <rect x="40" y="664" width="1360" height="76" rx="7" fill="#F7F2F9" stroke="#9C80A6" stroke-width="1.2" data-cell="d01-experiment" />
+  <text x="56" y="688.19" fill="#725789" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-51">Изолированный эксперимент</text>
+  <text x="56" y="716.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-52">Тест распознаёт формулы из двух PDF и передаёт их локальному оценщику по HTTP. Сервис Go работает отдельно.</text>
+  <polyline points="40,762 1400,762" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d01-item-53" />
+  <text x="40" y="791.536" fill="#19313D" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-54">Легенда</text>
+  <rect x="137" y="780" width="24" height="15" rx="3" fill="#F2F6F8" stroke="#7B95A3" stroke-width="1.5" data-cell="d01-item-55" />
+  <text x="176" y="791.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-56">участник</text>
+  <rect x="273" y="780" width="24" height="15" rx="3" fill="#E9F4EF" stroke="#4D8A7E" stroke-width="1.5" data-cell="d01-item-57" />
+  <text x="312" y="791.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-58">работает в КТ-2</text>
+  <rect x="460.48438" y="780" width="24" height="15" rx="3" fill="#FFFAED" stroke="#B18C42" stroke-width="1.5" data-cell="d01-item-59" stroke-dasharray="7 5" />
+  <text x="499.48438" y="791.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-60">план MVP</text>
+  <rect x="605.73438" y="780" width="24" height="15" rx="3" fill="#F7F2F9" stroke="#9C80A6" stroke-width="1.5" data-cell="d01-item-61" />
+  <text x="644.73438" y="791.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-62">изолированный опыт</text>
+  <polyline points="830.97266,787 861.97266,787" stroke="#496778" fill="none" stroke-width="1.7" stroke-linejoin="round" data-cell="d01-item-63" marker-end="url(#arrow-regular)" />
+  <text x="869.97266" y="791.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-64">направление запроса или ответа</text>
+  <text x="40" y="833.69" fill="#17675F" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-65">Связи</text>
+  <a href="../adr/ADR-001-system.md" xlink:href="../adr/ADR-001-system.md">
+    <text x="137" y="833.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-66">ADR-001</text>
+  </a>
+  <a href="../adr/ADR-003-interaction.md" xlink:href="../adr/ADR-003-interaction.md">
+    <text x="221.5" y="833.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d01-item-67">ADR-003</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="322" y="833.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-68">NFR-002</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="400.75" y="833.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-69">NFR-003</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="479.5" y="833.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d01-item-70">NFR-008</text>
+  </a>
+</svg>

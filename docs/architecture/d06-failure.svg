@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title description" data-page="D-06">
+  <title id="title">D-06. Два параллельных утверждения</title>
+  <desc id="description">Оба клиента отправили допустимые оценки с токеном одного преподавателя. В этом примере сервер первым начал транзакцию запроса A. Scan Grader. КТ-2. Редакция cp2-r2 от 24.11.2026.</desc>
+  <defs>
+    <marker id="arrow-regular" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#496778" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-plan" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#886420" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-exp" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#725789" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+    <marker id="arrow-error" viewBox="0 0 10 8" refX="9.3" refY="4" orient="auto" markerWidth="8" markerHeight="7">
+      <path fill="#994441" d="M0,0 L10,4 L0,8 Z" />
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1440" height="1040" fill="white" />
+  <text x="40" y="34.844" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-1">SCAN GRADER    /    КТ-2    /    АРХИТЕКТУРА</text>
+  <text x="1400" y="35.19" fill="#4C6471" text-anchor="end" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-2">cp2-r2   ·   24.11.2026</text>
+  <rect x="40" y="56" width="88" height="41" rx="4" fill="#17675F" stroke="#17675F" stroke-width="1.5" data-cell="d06-id" />
+  <text x="84" y="84.112" fill="#FFFFFF" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-4">D-06</text>
+  <text x="150" y="89.302" fill="#19313D" text-anchor="start" font-size="37" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-5">Два параллельных утверждения</text>
+  <text x="40" y="130.074" fill="#4C6471" text-anchor="start" font-size="19" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-6">Оба клиента отправили допустимые оценки с токеном одного преподавателя. В этом примере сервер первым начал транзакцию запроса A.</text>
+  <polyline points="40,151 1400,151" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d06-item-7" />
+  <rect x="702" y="171" width="698" height="611" rx="10" fill="#FCFEFD" stroke="#A8BEB8" stroke-width="1.5" data-cell="d06-scope" />
+  <text x="719" y="196.344" fill="#17675F" text-anchor="start" font-size="14" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-9">ЛОКАЛЬНЫЙ СЕРВИС И ЕГО БАЗА</text>
+  <rect x="40" y="210" width="246" height="558" rx="0" fill="none" stroke="none" stroke-width="1.5" data-cell="d06-a" aria-hidden="true" />
+  <rect x="40" y="210" width="246" height="63" rx="7" fill="#F2F6F8" stroke="#7B95A3" stroke-width="1.5" data-cell="d06-item-11" />
+  <text x="163" y="235.42" fill="#19313D" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-12">Клиент A</text>
+  <text x="163" y="259.19" fill="#4C6471" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-13">преподаватель</text>
+  <polyline points="163,273 163,768" stroke="#91A3AD" fill="none" stroke-width="1.1" stroke-linejoin="round" data-cell="d06-item-14" stroke-dasharray="6 5" />
+  <rect x="352" y="210" width="246" height="558" rx="0" fill="none" stroke="none" stroke-width="1.5" data-cell="d06-b" aria-hidden="true" />
+  <rect x="352" y="210" width="246" height="63" rx="7" fill="#F2F6F8" stroke="#7B95A3" stroke-width="1.5" data-cell="d06-item-16" />
+  <text x="475" y="235.42" fill="#19313D" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-17">Клиент B</text>
+  <text x="475" y="259.19" fill="#4C6471" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-18">тот же преподаватель</text>
+  <polyline points="475,273 475,768" stroke="#91A3AD" fill="none" stroke-width="1.1" stroke-linejoin="round" data-cell="d06-item-19" stroke-dasharray="6 5" />
+  <rect x="725" y="210" width="270" height="558" rx="0" fill="none" stroke="none" stroke-width="1.5" data-cell="d06-service" aria-hidden="true" />
+  <rect x="725" y="210" width="270" height="63" rx="7" fill="#E9F4EF" stroke="#4D8A7E" stroke-width="1.5" data-cell="d06-item-21" />
+  <text x="860" y="235.42" fill="#19313D" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-22">Сервис Go</text>
+  <text x="860" y="259.19" fill="#4C6471" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-23">api → storage → grading</text>
+  <polyline points="860,273 860,768" stroke="#91A3AD" fill="none" stroke-width="1.1" stroke-linejoin="round" data-cell="d06-item-24" stroke-dasharray="6 5" />
+  <rect x="1119" y="210" width="270" height="558" rx="0" fill="none" stroke="none" stroke-width="1.5" data-cell="d06-sqlite" aria-hidden="true" />
+  <rect x="1119" y="210" width="270" height="63" rx="7" fill="#EEF0F8" stroke="#7C83A1" stroke-width="1.5" data-cell="d06-item-26" />
+  <text x="1254" y="235.42" fill="#19313D" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-27">SQLite</text>
+  <text x="1254" y="259.19" fill="#4C6471" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-28">файл scangrader.db</text>
+  <polyline points="1254,273 1254,768" stroke="#91A3AD" fill="none" stroke-width="1.1" stroke-linejoin="round" data-cell="d06-item-29" stroke-dasharray="6 5" />
+  <polyline points="163,308 860,308" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d06-item-30" marker-end="url(#arrow-regular)" />
+  <rect x="324.51367" y="283" width="373.97266" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d06-item-31" />
+  <text x="511.5" y="298.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-32">A · POST /api/submissions/1/approve · 0,7 балла</text>
+  <polyline points="475,346 860,346" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d06-item-33" marker-end="url(#arrow-regular)" />
+  <rect x="480.50586" y="321" width="373.98828" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d06-item-34" />
+  <text x="667.5" y="336.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-35">B · POST /api/submissions/1/approve · 0,3 балла</text>
+  <polyline points="860,394 1254,394" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d06-item-36" marker-end="url(#arrow-regular)" />
+  <rect x="924.89258" y="369" width="264.21484" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d06-item-37" />
+  <text x="1057" y="384.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-38">A · BEGIN IMMEDIATE и SELECT</text>
+  <polyline points="1254,432 860,432" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d06-item-39" stroke-dasharray="7 5" marker-end="url(#arrow-regular)" />
+  <rect x="975.75" y="407" width="162.5" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d06-item-40" />
+  <text x="1057" y="422.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-41">approved_at = NULL</text>
+  <polyline points="860,474 1254,474" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d06-item-42" marker-end="url(#arrow-regular)" />
+  <rect x="888.0293" y="449" width="337.94141" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d06-item-43" />
+  <text x="1057" y="464.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-44">A · после Validate записывает итог и метки</text>
+  <polyline points="860,514 1254,514" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d06-item-45" marker-end="url(#arrow-regular)" />
+  <rect x="1006.38281" y="489" width="101.23438" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d06-item-46" />
+  <text x="1057" y="504.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-47">A · COMMIT</text>
+  <polyline points="860,557 163,557" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d06-item-48" stroke-dasharray="7 5" marker-end="url(#arrow-regular)" />
+  <rect x="374.15625" y="532" width="274.6875" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d06-item-49" />
+  <text x="511.5" y="547.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-50">200 OK · опубликован результат A</text>
+  <polyline points="860,606 1254,606" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d06-item-51" marker-end="url(#arrow-regular)" />
+  <rect x="924.88477" y="581" width="264.23047" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d06-item-52" />
+  <text x="1057" y="596.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-53">B · BEGIN IMMEDIATE и SELECT</text>
+  <polyline points="1254,644 860,644" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d06-item-54" stroke-dasharray="7 5" marker-end="url(#arrow-regular)" />
+  <rect x="902.24805" y="619" width="309.50391" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d06-item-55" />
+  <text x="1057" y="634.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-56">approved_at и approved_by уже заданы</text>
+  <polyline points="860,685 1254,685" stroke="#496778" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d06-item-57" marker-end="url(#arrow-regular)" />
+  <rect x="901.38086" y="660" width="311.23828" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d06-item-58" />
+  <text x="1057" y="675.209" fill="#496778" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-59">B · ROLLBACK после проверки статуса</text>
+  <polyline points="860,739 475,739" stroke="#994441" fill="none" stroke-width="2" stroke-linejoin="round" data-cell="d06-item-60" stroke-dasharray="7 5" marker-end="url(#arrow-error)" />
+  <rect x="520.62891" y="714" width="293.74219" height="19" rx="0" fill="#FFFFFF" stroke="none" stroke-width="0" data-cell="d06-item-61" />
+  <text x="667.5" y="729.209" fill="#994441" text-anchor="middle" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-62">409 Conflict · работа уже утверждена</text>
+  <rect x="40" y="809" width="653" height="113" rx="7" fill="#F3F7F7" stroke="#C9D8D8" stroke-width="1.2" data-cell="d06-locking" />
+  <text x="56" y="833.19" fill="#17675F" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-64">Почему второй запрос читает результат A</text>
+  <text x="56" y="861.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-65">Сервис открывает одно соединение. Записи выполняются по очереди.</text>
+  <text x="56" y="883.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-66">Транзакция BEGIN IMMEDIATE охватывает проверку статуса и запись итога.</text>
+  <rect x="714" y="809" width="686" height="113" rx="7" fill="#FBF0EC" stroke="#BA7A6E" stroke-width="1.2" data-cell="d06-result" />
+  <text x="730" y="833.19" fill="#994441" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-68">Что остаётся в базе после 409</text>
+  <text x="730" y="861.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-69">Оценки и поля approved_by и approved_at записал запрос A.</text>
+  <text x="730" y="883.209" fill="#354D59" text-anchor="start" font-size="16.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-70">Ответ на GET студента совпадает с ответом A · NFR-003, NFR-006.</text>
+  <polyline points="40,942 1400,942" stroke="#CCD9DC" fill="none" stroke-width="1.2" stroke-linejoin="round" data-cell="d06-item-71" />
+  <text x="40" y="971.536" fill="#19313D" text-anchor="start" font-size="16" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-72">Легенда</text>
+  <polyline points="137,967 168,967" stroke="#496778" fill="none" stroke-width="1.7" stroke-linejoin="round" data-cell="d06-item-73" marker-end="url(#arrow-regular)" />
+  <text x="176" y="971.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-74">вызов</text>
+  <polyline points="253.24609,967 284.24609,967" stroke="#496778" fill="none" stroke-width="1.7" stroke-linejoin="round" data-cell="d06-item-75" stroke-dasharray="7 5" marker-end="url(#arrow-regular)" />
+  <text x="292.24609" y="971.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-76">ответ</text>
+  <polyline points="365.48047,967 396.48047,967" stroke="#994441" fill="none" stroke-width="1.7" stroke-linejoin="round" data-cell="d06-item-77" marker-end="url(#arrow-error)" />
+  <text x="404.48047" y="971.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-78">отказ в повторной записи</text>
+  <rect x="621.46875" y="961" width="24" height="13" rx="2" fill="none" stroke="#92ABA3" stroke-width="1.5" data-cell="d06-item-79" />
+  <text x="660.46875" y="971.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-80">граница сервиса</text>
+  <rect x="814.21875" y="960" width="24" height="15" rx="3" fill="#F2F6F8" stroke="#7B95A3" stroke-width="1.5" data-cell="d06-item-81" />
+  <text x="853.21875" y="971.863" fill="#354D59" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-82">два клиента одной роли</text>
+  <text x="40" y="1013.69" fill="#17675F" text-anchor="start" font-size="15" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-83">Связи</text>
+  <a href="../adr/ADR-002-storage.md" xlink:href="../adr/ADR-002-storage.md">
+    <text x="137" y="1013.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-84">ADR-002</text>
+  </a>
+  <a href="../adr/ADR-003-interaction.md" xlink:href="../adr/ADR-003-interaction.md">
+    <text x="221.5" y="1013.363" fill="#17675F" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="700" data-cell="d06-item-85">ADR-003</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="322" y="1013.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-86">NFR-003</text>
+  </a>
+  <a href="../requirements/nfr.md" xlink:href="../requirements/nfr.md">
+    <text x="400.75" y="1013.363" fill="#4C6471" text-anchor="start" font-size="15.5" font-family="Arial, sans-serif" font-weight="400" data-cell="d06-item-87">NFR-006</text>
+  </a>
+</svg>
